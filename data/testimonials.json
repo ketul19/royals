@@ -1,0 +1,74 @@
+[
+  {
+    "id": "review-1",
+    "authorName": "Rahul Mehta",
+    "authorPhotoUrl": null,
+    "rating": 5,
+    "text": "Stayed here for 3 nights for a family wedding and couldn't have been more satisfied. The rooms are spacious, clean, and the staff goes out of their way to make you feel at home. The food at The Table restaurant is outstanding — the Gujarati thali is an absolute must-try. Will definitely be returning!",
+    "date": "2024-11-15",
+    "source": "google"
+  },
+  {
+    "id": "review-2",
+    "authorName": "Priya Sharma",
+    "authorPhotoUrl": null,
+    "rating": 5,
+    "text": "Royal's Inn exceeded all our expectations. The location is convenient — right in the heart of Navsari, easy to access from the highway. The AC rooms are well-maintained and comfortable. What impressed us most was the exceptional hospitality from the reception team. 5 stars without hesitation!",
+    "date": "2024-10-22",
+    "source": "google"
+  },
+  {
+    "id": "review-3",
+    "authorName": "Arjun Patel",
+    "authorPhotoUrl": null,
+    "rating": 4,
+    "text": "Great value for money in Navsari. Clean rooms, friendly staff, and delicious food. The hostel section is perfect for solo travellers — met some lovely people in the common lounge. Breakfast was fresh and tasty. Minor suggestion: could use more power outlets near the desks. Overall a solid stay.",
+    "date": "2024-09-30",
+    "source": "google"
+  },
+  {
+    "id": "review-4",
+    "authorName": "Kavita Desai",
+    "authorPhotoUrl": null,
+    "rating": 5,
+    "text": "We hosted our daughter's birthday party at Royal's Inn and it was perfect. The banquet hall was beautifully arranged, the catering team was attentive, and the overall organisation was flawless. Many of our guests commented on the décor and food quality. Highly recommend for events!",
+    "date": "2024-09-08",
+    "source": "google"
+  },
+  {
+    "id": "review-5",
+    "authorName": "Suresh Nair",
+    "authorPhotoUrl": null,
+    "rating": 4,
+    "text": "Stayed here on a business trip. The room was comfortable, Wi-Fi was reliable, and the staff were professional and courteous. The restaurant served excellent South Indian breakfast — crispy dosas and fresh idlis. Check-in was smooth and quick. Would recommend to fellow business travellers.",
+    "date": "2024-08-19",
+    "source": "google"
+  },
+  {
+    "id": "review-6",
+    "authorName": "Anjali Joshi",
+    "authorPhotoUrl": null,
+    "rating": 5,
+    "text": "What a gem! Found Royal's Inn while searching for accommodation in Navsari and I'm so glad I did. The rooms are immaculate, the pillows are wonderfully comfortable, and the restaurant food is home-style delicious. The owner is personally involved in ensuring every guest is happy. Truly royal treatment!",
+    "date": "2024-07-04",
+    "source": "google"
+  },
+  {
+    "id": "review-7",
+    "authorName": "Vikram Thakkar",
+    "authorPhotoUrl": null,
+    "rating": 4,
+    "text": "Good hotel with a great location. The Non-AC family room was well-sized for our family of four. Kids loved the common area and the staff were very accommodating. The Punjabi food — especially the Dal Makhani — was absolutely fantastic. Would love to see a small pool added in future!",
+    "date": "2024-06-12",
+    "source": "google"
+  },
+  {
+    "id": "review-8",
+    "authorName": "Meera Iyer",
+    "authorPhotoUrl": null,
+    "rating": 5,
+    "text": "First time visiting Navsari and Royal's Inn made the trip memorable. The staff recommended local attractions, the room was spotless, and checkout was hassle-free. The Chinese menu surprised me — excellent Manchurian and fried rice. Will be back when I visit again.",
+    "date": "2024-05-20",
+    "source": "google"
+  }
+]

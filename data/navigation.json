@@ -1,0 +1,9 @@
+[
+  { "label": "Home", "href": "/" },
+  { "label": "About", "href": "/about" },
+  { "label": "Rooms", "href": "/rooms" },
+  { "label": "The Table", "href": "/dining" },
+  { "label": "Gallery", "href": "/gallery" },
+  { "label": "Reviews", "href": "/testimonials" },
+  { "label": "Contact", "href": "/contact" }
+]

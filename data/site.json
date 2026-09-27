@@ -1,0 +1,16 @@
+{
+  "name": "Royal's Inn Hotel",
+  "tagline": "Where Every Stay Feels Like Royalty",
+  "logoSvgPath": "/images/logo.svg",
+  "address": "Eru Aat Road, opp. DGVCL office, Eru Char Rasta, Navsari, Gujarat 396450",
+  "phone": "+91 95587 84840",
+  "whatsappNumber": "919558784840",
+  "googleRating": 4.5,
+  "googleReviewUrl": null,
+  "googleProfileUrl": null,
+  "socials": [
+    { "platform": "instagram", "url": "https://instagram.com" },
+    { "platform": "facebook", "url": "https://facebook.com" }
+  ],
+  "mapCoordinates": { "lat": 20.9504, "lng": 72.9521 }
+}

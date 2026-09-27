@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────────────────────────────────
+   TAILWIND v4 THEME — Custom design tokens registered as Tailwind utilities.
+   These extend the default theme so classes like `font-display`, `text-hero`,
+   `text-accent`, `bg-bg-primary`, `rounded-card`, `shadow-card` all work.
+   ────────────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Fonts */
+  --font-display: var(--font-display, Georgia, serif);
+  --font-sans:    var(--font-sans, system-ui, sans-serif);
+
+  /* Custom font size */
+  --text-hero: clamp(4rem, 12vw, 9rem);
+
+  /* Color utilities via CSS variables */
+  --color-bg-primary:    var(--color-bg-primary);
+  --color-bg-elevated:   var(--color-bg-elevated);
+  --color-bg-section:    var(--color-bg-section);
+  --color-text-primary:  var(--color-text-primary);
+  --color-text-muted:    var(--color-text-muted);
+  --color-accent:        var(--color-accent);
+  --color-accent-muted:  var(--color-accent-muted);
+  --color-border:        var(--color-border);
+  --color-border-subtle: var(--color-border-subtle);
+
+  /* Radius */
+  --radius-card:  var(--radius-card);
+  --radius-modal: var(--radius-modal);
+  --radius-pill:  var(--radius-pill);
+
+  /* Shadows */
+  --shadow-card:       var(--shadow-card);
+  --shadow-card-hover: var(--shadow-card-hover);
+  --shadow-modal:      var(--shadow-modal);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   DESIGN TOKENS — Color Palette (Dark-mode-first)
+   WCAG AA note: once hex values are finalised, verify all text/bg combos
+   pass 4.5:1 contrast ratio for normal text, 3:1 for large text (≥18pt or
+   ≥14pt bold). Use https://webaim.org/resources/contrastchecker/ to verify.
+   ────────────────────────────────────────────────────────────────────────── */
+:root {
+  /* ── Backgrounds ── */
+  --color-bg-primary:     #0e0d0b;   /* Near-black warm base */
+  --color-bg-elevated:    #1a1814;   /* Card/panel surface */
+  --color-bg-section:     #141210;   /* Alternate section bg */
+  --color-overlay:        rgba(14, 13, 11, 0.85);
+
+  /* ── Text ── */
+  --color-text-primary:   #f5f0e8;   /* Warm off-white — main text */
+  --color-text-muted:     #9c9488;   /* Subdued labels, captions */
+  --color-text-inverse:   #0e0d0b;   /* Text on accent/light bg */
+
+  /* ── Accent — Gold crest colour ── */
+  --color-accent:         #db9c4b;   /* Logo gold */
+  --color-accent-muted:   rgba(219, 156, 75, 0.15);
+  --color-accent-foreground: #0e0d0b;
+
+  /* ── Borders ── */
+  --color-border:         rgba(219, 156, 75, 0.2);
+  --color-border-subtle:  rgba(245, 240, 232, 0.08);
+
+  /* ── Radius ── */
+  --radius-card:  0.75rem;    /* 12px */
+  --radius-modal: 1rem;       /* 16px */
+  --radius-pill:  9999px;
+
+  /* ── Shadows ── */
+  --shadow-card:       0 2px 12px rgba(0,0,0,0.4);
+  --shadow-card-hover: 0 8px 32px rgba(0,0,0,0.6);
+  --shadow-modal:      0 24px 64px rgba(0,0,0,0.8);
+
+  /* ── Motion ── */
+  --duration-fast:   150ms;
+  --duration-base:   250ms;
+  --duration-slow:   400ms;
+  --duration-hero:   800ms;
+  --ease-smooth:     cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce:     cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Shorthand aliases (used by generated components) ── */
+  --bg:              var(--color-bg-primary);
+  --bg-secondary:    var(--color-bg-elevated);
+  --bg-muted:        var(--color-bg-section);
+  --fg:              var(--color-text-primary);
+  --fg-muted:        var(--color-text-muted);
+  --accent:          var(--color-accent);
+  --primary:         var(--color-accent);
+  --border:          var(--color-border);
+  --section:         var(--color-bg-section);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   GLOBAL BASE STYLES
+   ────────────────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Respect reduced motion — overrides smooth scroll and CSS animations */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans, system-ui, sans-serif);
+  min-height: 100dvh;
+  line-height: 1.6;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   FOCUS STYLES — WCAG 2.1 AA keyboard navigation
+   ────────────────────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Remove default focus for mouse users, keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   LEAFLET MAP — Override z-index for Next.js compatibility
+   ────────────────────────────────────────────────────────────────────────── */
+.leaflet-container {
+  z-index: 0;
+  background: var(--color-bg-elevated);
+}
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.leaflet-popup-content-wrapper {
+  background: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-modal);
+}
+.leaflet-popup-tip {
+  background: var(--color-bg-elevated);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   UTILITY CLASSES
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* Visually hidden but accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Gradient overlay for hero images */
+.hero-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(14, 13, 11, 0.92) 0%,
+    rgba(14, 13, 11, 0.6) 60%,
+    rgba(14, 13, 11, 0.1) 100%
+  );
+}
+
+/* Gold accent gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #f0c070 50%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass card effect */
+.glass {
+  background: rgba(26, 24, 20, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-subtle);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   SCROLLBAR STYLING (optional elegance touch)
+   ────────────────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Footer link hover states — defined in CSS to avoid event handlers in Server Components */
+.footer-link {
+  color: var(--color-text-muted);
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+.footer-link:hover {
+  color: var(--color-text-primary);
+}
+
+/* Social icon hover states */
+.social-icon {
+  transition: border-color var(--duration-fast) var(--ease-smooth),
+              color var(--duration-fast) var(--ease-smooth);
+}
+.social-icon:hover {
+  border-color: var(--color-accent) !important;
+  color: var(--color-accent) !important;
+}

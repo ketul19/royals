@@ -1,0 +1,158 @@
+[
+  {
+    "id": "punjabi",
+    "name": "Punjabi",
+    "description": "Hearty, flavour-packed North Indian classics — from buttery dal makhani to sizzling tandoori platters. Bold spices, rich gravies, and the warmth of the Punjab, served fresh daily.",
+    "items": [
+      {
+        "id": "dal-makhani",
+        "name": "Dal Makhani",
+        "price": 180,
+        "isVeg": true,
+        "description": "Slow-cooked black lentils in a creamy tomato-butter sauce, finished with a dash of cream. A North Indian staple that never disappoints.",
+        "image": "/images/dining/dining (1).jpg"
+      },
+      {
+        "id": "butter-chicken",
+        "name": "Butter Chicken",
+        "price": 280,
+        "isVeg": false,
+        "description": "Tender chicken in a velvety tomato-cream sauce, lightly spiced and perfectly balanced. Best enjoyed with fresh naan.",
+        "image": "/images/dining/dining (1).jpg"
+      },
+      {
+        "id": "paneer-tikka",
+        "name": "Paneer Tikka",
+        "price": 220,
+        "isVeg": true,
+        "description": "Marinated cottage cheese cubes grilled in the tandoor until golden and fragrant. Served with mint chutney.",
+        "image": "/images/dining/dining (1).jpg"
+      },
+      {
+        "id": "tandoori-roti",
+        "name": "Tandoori Roti",
+        "price": 30,
+        "isVeg": true,
+        "description": "Freshly made whole-wheat flatbread baked in a clay tandoor. Soft inside, slightly charred outside.",
+        "image": "/images/dining/dining (1).jpg"
+      }
+    ]
+  },
+  {
+    "id": "gujarati",
+    "name": "Gujarati",
+    "description": "A celebration of Gujarat's culinary heritage — sweet, savoury, and spiced in perfect harmony. Traditional thali meals and regional specialities that feel like home.",
+    "items": [
+      {
+        "id": "gujarati-thali",
+        "name": "Gujarati Thali",
+        "price": 250,
+        "isVeg": true,
+        "description": "A complete Gujarati meal with dal, sabzi, kadhi, rice, rotli, papad, pickle, and a sweet. Comfort in every bite.",
+        "image": "/images/dining/dining (1).jpg"
+      },
+      {
+        "id": "dhokla",
+        "name": "Steamed Dhokla",
+        "price": 80,
+        "isVeg": true,
+        "description": "Light, spongy chickpea-flour cakes, tempered with mustard seeds and curry leaves. A Gujarati classic for any time of day.",
+        "image": "/images/dining/dining (1).jpg"
+      },
+      {
+        "id": "undhiyu",
+        "name": "Undhiyu",
+        "price": 200,
+        "isVeg": true,
+        "description": "A slow-cooked winter delicacy of mixed vegetables and fenugreek dumplings, bursting with authentic Gujarati spice.",
+        "image": "/images/dining/dining (1).jpg"
+      },
+      {
+        "id": "khaman",
+        "name": "Khaman",
+        "price": 70,
+        "isVeg": true,
+        "description": "Soft and fluffy chickpea-flour snack with a sweet-sour-spicy tadka. Perfect for breakfast or a light snack.",
+        "image": "/images/dining/dining (1).jpg"
+      }
+    ]
+  },
+  {
+    "id": "south-indian",
+    "name": "South Indian",
+    "description": "Crisp dosas, fluffy idlis, and aromatic sambars — authentic South Indian flavours made with time-honoured recipes and the freshest ingredients.",
+    "items": [
+      {
+        "id": "masala-dosa",
+        "name": "Masala Dosa",
+        "price": 120,
+        "isVeg": true,
+        "description": "A crisp, golden rice crêpe filled with spiced potato masala. Served with coconut chutney and sambar.",
+        "image": "/images/dining/dining (1).jpg"
+      },
+      {
+        "id": "idli-sambar",
+        "name": "Idli Sambar (3 pcs)",
+        "price": 90,
+        "isVeg": true,
+        "description": "Fluffy steamed rice cakes served with a tangy lentil sambar and fresh coconut chutney. A South Indian morning staple.",
+        "image": "/images/dining/dining (1).jpg"
+      },
+      {
+        "id": "vada",
+        "name": "Medu Vada (2 pcs)",
+        "price": 80,
+        "isVeg": true,
+        "description": "Crispy fried lentil doughnuts with a soft interior. Served with coconut chutney and sambar.",
+        "image": "/images/dining/dining (1).jpg"
+      },
+      {
+        "id": "uthappam",
+        "name": "Uthappam",
+        "price": 100,
+        "isVeg": true,
+        "description": "Thick, soft rice pancakes topped with onions, tomatoes, and green chillies. A wholesome South Indian favourite.",
+        "image": "/images/dining/dining (1).jpg"
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "name": "Chinese",
+    "description": "Indo-Chinese favourites with the bold flavours Navsari loves — from fried rice to fiery Manchurian. Quick, satisfying, and crowd-pleasing.",
+    "items": [
+      {
+        "id": "veg-fried-rice",
+        "name": "Veg Fried Rice",
+        "price": 150,
+        "isVeg": true,
+        "description": "Wok-tossed basmati rice with fresh vegetables, soy sauce, and spring onions. A comforting crowd-pleaser.",
+        "image": "/images/dining/dining (1).jpg"
+      },
+      {
+        "id": "paneer-manchurian",
+        "name": "Paneer Manchurian",
+        "price": 200,
+        "isVeg": true,
+        "description": "Crispy cottage cheese in a tangy, spicy Manchurian sauce. Perfect with fried rice or hakka noodles.",
+        "image": "/images/dining/dining (1).jpg"
+      },
+      {
+        "id": "veg-noodles",
+        "name": "Veg Hakka Noodles",
+        "price": 140,
+        "isVeg": true,
+        "description": "Stir-fried noodles with crunchy vegetables and a savoury soy-chilli sauce. Quick and delicious.",
+        "image": "/images/dining/dining (1).jpg"
+      },
+      {
+        "id": "spring-rolls",
+        "name": "Veg Spring Rolls (4 pcs)",
+        "price": 120,
+        "isVeg": true,
+        "description": "Golden, crispy rolls packed with spiced mixed vegetables. Served with sweet chilli dipping sauce.",
+        "image": "/images/dining/dining (1).jpg"
+      }
+    ]
+  }
+]

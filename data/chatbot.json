@@ -1,0 +1,43 @@
+{
+  "welcomeMessage": "Welcome to Royal's Inn! 👑 I'm here to help you with any questions about our rooms, dining, events, or location. How can I assist you today?",
+  "fallbackResponse": "I'm sorry, I couldn't find a specific answer to that. For personalised assistance, please reach out to us directly on WhatsApp — our team is happy to help! 💬",
+  "quickReplies": ["Rooms & Rates", "Dining", "Events & Banquet", "Location", "Book via WhatsApp"],
+  "rules": [
+    {
+      "keywords": ["room", "rooms", "stay", "accommodation", "suite", "ac", "hostel", "dormitory", "bed", "book"],
+      "response": "We offer AC Deluxe Rooms from ₹1,800/night, AC Executive Suites from ₹2,800/night, Non-AC rooms from ₹900/night, and Hostel beds from ₹350/night. All rooms include free Wi-Fi and daily housekeeping. Visit our Rooms page for full details and to make an enquiry via WhatsApp!"
+    },
+    {
+      "keywords": ["price", "rate", "cost", "tariff", "how much", "charges", "fee"],
+      "response": "Our room rates start at ₹350/night (hostel bed), ₹900/night (Non-AC), ₹1,800/night (AC Deluxe), and ₹2,800/night (Executive Suite). Dining prices vary by dish — check our The Table page for our full menu. Feel free to WhatsApp us for any special packages!"
+    },
+    {
+      "keywords": ["food", "dining", "restaurant", "menu", "eat", "breakfast", "lunch", "dinner", "cuisine", "table"],
+      "response": "Our restaurant — The Table — serves Punjabi, Gujarati, South Indian, and Chinese cuisine. Our Gujarati Thali (₹250) and Butter Chicken (₹280) are guest favourites. We serve breakfast, lunch, and dinner daily. Visit The Table page for our full menu!"
+    },
+    {
+      "keywords": ["event", "events", "wedding", "birthday", "party", "corporate", "banquet", "function", "hall"],
+      "response": "Royal's Inn has beautiful banquet and event spaces perfect for weddings, birthday parties, corporate events, and social gatherings. Our events team handles everything from decoration to catering. WhatsApp us to discuss your requirements and get a personalised quote!"
+    },
+    {
+      "keywords": ["location", "address", "where", "direction", "directions", "map", "navsari", "reach", "how to reach"],
+      "response": "We're located at Eru Aat Road, opp. DGVCL office, Eru Char Rasta, Navsari, Gujarat 396450. Easily accessible from Navsari Railway Station and the main highway. Visit our Contact page for a map and directions!"
+    },
+    {
+      "keywords": ["wifi", "wi-fi", "internet", "network"],
+      "response": "Yes! All our rooms and common areas have complimentary high-speed Wi-Fi included in your stay. No extra charge!"
+    },
+    {
+      "keywords": ["checkin", "check-in", "checkout", "check-out", "timing", "time"],
+      "response": "Our standard check-in time is 12:00 PM and check-out is 11:00 AM. Early check-in and late check-out may be available on request — please WhatsApp us to arrange!"
+    },
+    {
+      "keywords": ["amenity", "amenities", "facilities", "feature"],
+      "response": "Royal's Inn features free Wi-Fi, daily housekeeping, room service, our restaurant The Table, banquet/event halls, a hostel common lounge, and 24-hour reception. Our AC rooms include a TV and tea/coffee maker!"
+    },
+    {
+      "keywords": ["contact", "phone", "whatsapp", "call", "number"],
+      "response": "You can reach us at +91 95587 84840. The easiest way is to WhatsApp us — just click the WhatsApp button above and our team will respond promptly!"
+    }
+  ]
+}

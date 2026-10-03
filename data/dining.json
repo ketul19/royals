@@ -10,7 +10,7 @@
         "price": 180,
         "isVeg": true,
         "description": "Slow-cooked black lentils in a creamy tomato-butter sauce, finished with a dash of cream. A North Indian staple that never disappoints.",
-        "image": "/images/dining/dining (1).jpg"
+        "image": "/images/dining/dining (2).jpg"
       },
       {
         "id": "butter-chicken",
@@ -18,7 +18,7 @@
         "price": 280,
         "isVeg": false,
         "description": "Tender chicken in a velvety tomato-cream sauce, lightly spiced and perfectly balanced. Best enjoyed with fresh naan.",
-        "image": "/images/dining/dining (1).jpg"
+        "image": "/images/dining/dining (3).jpg"
       },
       {
         "id": "paneer-tikka",
@@ -26,7 +26,7 @@
         "price": 220,
         "isVeg": true,
         "description": "Marinated cottage cheese cubes grilled in the tandoor until golden and fragrant. Served with mint chutney.",
-        "image": "/images/dining/dining (1).jpg"
+        "image": "/images/dining/dining (6).jpg"
       },
       {
         "id": "tandoori-roti",

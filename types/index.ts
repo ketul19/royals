@@ -4,7 +4,6 @@
 export interface SiteConfig {
   name: string;
   tagline: string;
-  logoSvgPath: string;
   address: string;
   phone: string;
   whatsappNumber: string;

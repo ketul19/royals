@@ -10,8 +10,8 @@
     "description": "Our AC Deluxe rooms offer a serene retreat with modern amenities, plush bedding, and a private en-suite bathroom. Ideal for business travellers and couples seeking a comfortable, climate-controlled stay in the heart of Navsari.",
     "amenities": ["Air Conditioning", "King Bed", "En-Suite Bathroom", "Free Wi-Fi", "Flat-Screen TV", "Room Service", "Daily Housekeeping", "Tea/Coffee Maker"],
     "images": [
-      "/images/rooms/ac-deluxe-1.jpg",
-      "/images/rooms/ac-deluxe-2.jpg"
+      "/images/rooms/room (1).jpg",
+      "/images/rooms/room (2).jpg"
     ],
     "ctaMessage": "Hi! I'd like to enquire about the AC Deluxe Room at Royal's Inn. Please let me know availability and pricing."
   },
@@ -26,8 +26,8 @@
     "description": "Indulge in refined luxury with our AC Executive Suite — a spacious sanctuary featuring a separate living area, premium bath amenities, and curated décor. Perfect for extended stays or special occasions.",
     "amenities": ["Air Conditioning", "King Bed", "Living Area", "Premium Bathroom", "Free Wi-Fi", "Flat-Screen TV", "Mini Fridge", "Room Service", "Daily Housekeeping", "Work Desk"],
     "images": [
-      "/images/rooms/ac-suite-1.jpg",
-      "/images/rooms/ac-suite-2.jpg"
+      "/images/rooms/room (3).jpg",
+      "/images/rooms/room (4).jpg"
     ],
     "ctaMessage": "Hi! I'm interested in the AC Executive Suite at Royal's Inn. Could you share availability and rates?"
   },
@@ -42,8 +42,8 @@
     "description": "Clean, comfortable, and thoughtfully appointed, our Standard Non-AC rooms are ideal for budget-conscious travellers who don't want to compromise on quality. A quiet, welcoming space with everything you need.",
     "amenities": ["Ceiling Fan", "Double Bed", "Attached Bathroom", "Free Wi-Fi", "TV", "Daily Housekeeping"],
     "images": [
-      "/images/rooms/non-ac-standard-1.jpg",
-      "/images/rooms/non-ac-standard-2.jpg"
+      "/images/rooms/room (2).jpg",
+      "/images/rooms/room (3).jpg"
     ],
     "ctaMessage": "Hi! I'd like to book a Standard Room at Royal's Inn. Could you confirm availability?"
   },
@@ -58,8 +58,8 @@
     "description": "Spacious and thoughtfully arranged, our Non-AC Family Room comfortably accommodates families of up to four. Two beds, ample storage, and a warm ambience make it the perfect home-away-from-home.",
     "amenities": ["Ceiling Fan", "2 Double Beds", "Attached Bathroom", "Free Wi-Fi", "TV", "Daily Housekeeping", "Storage Wardrobe"],
     "images": [
-      "/images/rooms/non-ac-family-1.jpg",
-      "/images/rooms/non-ac-family-2.jpg"
+      "/images/rooms/room (4).jpg",
+      "/images/rooms/room (5).jpg"
     ],
     "ctaMessage": "Hi! I'm looking to book the Family Room at Royal's Inn for our family. Please share availability."
   },
@@ -74,8 +74,8 @@
     "description": "Our clean, safe hostel dormitory is perfect for solo travellers and backpackers. Each bed comes with a personal locker, fresh linens, and access to shared amenities. Meet fellow travellers in our common area.",
     "amenities": ["Comfortable Bunk Bed", "Personal Locker", "Shared Bathroom", "Free Wi-Fi", "Common Lounge", "Daily Housekeeping"],
     "images": [
-      "/images/rooms/hostel-1.jpg",
-      "/images/rooms/hostel-2.jpg"
+      "/images/rooms/room (5).jpg",
+      "/images/rooms/room (1).jpg"
     ],
     "ctaMessage": "Hi! I'd like to book a hostel bed at Royal's Inn. Please let me know availability."
   }

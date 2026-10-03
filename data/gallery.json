@@ -7,33 +7,33 @@
         "id": "wedding",
         "name": "Wedding",
         "images": [
-          { "src": "/images/gallery/events/wedding-1.jpg", "alt": "Elegant wedding banquet hall decorated with flowers and fairy lights at Royal's Inn", "caption": "Grand Wedding Hall" },
-          { "src": "/images/gallery/events/wedding-2.jpg", "alt": "Wedding reception setup with round tables and centrepieces", "caption": "Reception Setup" },
-          { "src": "/images/gallery/events/wedding-3.jpg", "alt": "Wedding ceremony stage with floral arch", "caption": "Ceremony Stage" }
+          { "src": "/images/gallery/events/event (5).jpg", "alt": "Elegant wedding banquet hall decorated with flowers and fairy lights at Royal's Inn", "caption": "Grand Wedding Hall" },
+          { "src": "/images/gallery/events/event (4).jpg", "alt": "Wedding reception setup with round tables and centrepieces", "caption": "Reception Setup" },
+          { "src": "/images/gallery/events/event (3).jpg", "alt": "Wedding ceremony stage with floral arch", "caption": "Ceremony Stage" }
         ]
       },
       {
         "id": "birthday",
         "name": "Birthday",
         "images": [
-          { "src": "/images/gallery/events/birthday-1.jpg", "alt": "Birthday party setup with colourful balloons and cake table at Royal's Inn", "caption": "Birthday Celebration" },
-          { "src": "/images/gallery/events/birthday-2.jpg", "alt": "Intimate birthday dinner with personalised décor", "caption": "Private Birthday Dinner" }
+          { "src": "/images/gallery/events/event (4).jpg", "alt": "Birthday party setup with colourful balloons and cake table at Royal's Inn", "caption": "Birthday Celebration" },
+          { "src": "/images/gallery/events/event (5).jpg", "alt": "Intimate birthday dinner with personalised décor", "caption": "Private Birthday Dinner" }
         ]
       },
       {
         "id": "corporate",
         "name": "Corporate",
         "images": [
-          { "src": "/images/gallery/events/corporate-1.jpg", "alt": "Conference room set up for business meeting at Royal's Inn", "caption": "Conference Setup" },
-          { "src": "/images/gallery/events/corporate-2.jpg", "alt": "Corporate gala dinner at Royal's Inn banquet hall", "caption": "Corporate Gala" }
+          { "src": "/images/gallery/events/event (6).jpg", "alt": "Conference room set up for business meeting at Royal's Inn", "caption": "Conference Setup" },
+          { "src": "/images/gallery/events/event (1).jpg", "alt": "Corporate gala dinner at Royal's Inn banquet hall", "caption": "Corporate Gala" }
         ]
       },
       {
         "id": "party",
         "name": "Party",
         "images": [
-          { "src": "/images/gallery/events/party-1.jpg", "alt": "Social gathering and celebration at Royal's Inn", "caption": "Social Celebration" },
-          { "src": "/images/gallery/events/party-2.jpg", "alt": "Festive party ambience with lighting and décor", "caption": "Festive Evening" }
+          { "src": "/images/gallery/events/event (2).jpg", "alt": "Social gathering and celebration at Royal's Inn", "caption": "Social Celebration" },
+          { "src": "/images/gallery/events/event (3).jpg", "alt": "Festive party ambience with lighting and décor", "caption": "Festive Evening" }
         ]
       }
     ]
@@ -46,27 +46,27 @@
         "id": "rooms",
         "name": "Rooms",
         "images": [
-          { "src": "/images/gallery/spaces/room-1.jpg", "alt": "Well-appointed AC Deluxe Room with king bed and warm lighting at Royal's Inn", "caption": "AC Deluxe Room" },
-          { "src": "/images/gallery/spaces/room-2.jpg", "alt": "Cozy standard room with comfortable furnishings", "caption": "Standard Room" },
-          { "src": "/images/gallery/spaces/room-3.jpg", "alt": "Spacious executive suite with seating area", "caption": "Executive Suite" }
+          { "src": "/images/gallery/spaces/spaces (1).jpg", "alt": "Well-appointed AC Deluxe Room with king bed and warm lighting at Royal's Inn", "caption": "AC Deluxe Room" },
+          { "src": "/images/gallery/spaces/spaces (2).jpg", "alt": "Cozy standard room with comfortable furnishings", "caption": "Standard Room" },
+          { "src": "/images/gallery/spaces/spaces (3).jpg", "alt": "Spacious executive suite with seating area", "caption": "Executive Suite" }
         ]
       },
       {
         "id": "amenities",
         "name": "Amenities",
         "images": [
-          { "src": "/images/gallery/spaces/amenity-1.jpg", "alt": "Hotel restaurant dining area with warm ambience at Royal's Inn", "caption": "The Table Restaurant" },
-          { "src": "/images/gallery/spaces/amenity-2.jpg", "alt": "Hotel lobby with elegant seating and décor", "caption": "Lobby" },
-          { "src": "/images/gallery/spaces/amenity-3.jpg", "alt": "Hostel common lounge area for travellers", "caption": "Hostel Lounge" }
+          { "src": "/images/gallery/spaces/spaces (4).jpg", "alt": "Hotel restaurant dining area with warm ambience at Royal's Inn", "caption": "The Table Restaurant" },
+          { "src": "/images/gallery/spaces/spaces (5).jpg", "alt": "Hotel lobby with elegant seating and décor", "caption": "Lobby" },
+          { "src": "/images/gallery/spaces/spaces (6).jpg", "alt": "Hostel common lounge area for travellers", "caption": "Hostel Lounge" }
         ]
       },
       {
         "id": "surroundings",
         "name": "Surroundings",
         "images": [
-          { "src": "/images/gallery/spaces/surround-1.jpg", "alt": "Navsari cityscape and surroundings near Royal's Inn", "caption": "Navsari City" },
-          { "src": "/images/gallery/spaces/surround-2.jpg", "alt": "Local markets and attractions near the hotel", "caption": "Local Attractions" },
-          { "src": "/images/gallery/spaces/surround-3.jpg", "alt": "Hotel exterior view at Royal's Inn Navsari", "caption": "Hotel Exterior" }
+          { "src": "/images/gallery/spaces/spaces (7).jpg", "alt": "Navsari cityscape and surroundings near Royal's Inn", "caption": "Navsari City" },
+          { "src": "/images/gallery/spaces/spaces (8).jpg", "alt": "Local markets and attractions near the hotel", "caption": "Local Attractions" },
+          { "src": "/images/gallery/spaces/spaces (1).jpg", "alt": "Hotel exterior view at Royal's Inn Navsari", "caption": "Hotel Exterior" }
         ]
       }
     ]

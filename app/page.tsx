@@ -37,11 +37,12 @@ export default function HomePage() {
       <section className="relative h-screen min-h-[600px] w-full flex flex-col justify-end pb-12 sm:pb-20 pt-32">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-bg.jpg"
-            alt="Royal's Inn Hotel Navsari"
+            src="\images\rooms\room (1).jpg"
+            alt="Guest room at Royal's Inn"
             fill
             className="object-cover"
-            priority
+            sizes="100vw"
+            preload
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-black/40 to-black/20" />
         </div>
@@ -157,15 +158,21 @@ export default function HomePage() {
           </AnimatedSection>
 
           <AnimatedSection className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-            {/* Placeholders for masonry gallery */}
             {[
-              { h: 'h-64', bg: 'bg-neutral-800' },
-              { h: 'h-96', bg: 'bg-neutral-900' },
-              { h: 'h-72', bg: 'bg-neutral-800' },
-              { h: 'h-80', bg: 'bg-neutral-900' },
-              { h: 'h-64', bg: 'bg-neutral-800' },
-            ].map((item, i) => (
-              <div key={i} className={`w-full rounded-2xl overflow-hidden ${item.bg} ${item.h} relative group`}>
+              { h: 'h-64', src: "/images/gallery/spaces/spaces (1).jpg", alt: "A room at Royal's Inn" },
+              { h: 'h-96', src: "/images/gallery/spaces/spaces (2).jpg", alt: "Guest room at Royal's Inn" },
+              { h: 'h-72', src: "/images/gallery/spaces/spaces (3).jpg", alt: "Hotel suite at Royal's Inn" },
+              { h: 'h-80', src: "/images/gallery/spaces/spaces (4).jpg", alt: "Dining space at Royal's Inn" },
+              { h: 'h-64', src: "/images/gallery/spaces/spaces (5).jpg", alt: "Hotel interior at Royal's Inn" },
+            ].map((item) => (
+              <div key={item.src} className={`w-full rounded-2xl overflow-hidden ${item.h} relative group`}>
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
               </div>
             ))}

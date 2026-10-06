@@ -1,0 +1,198 @@
+[
+  {
+    "id": "punjabi",
+    "name": "Punjabi",
+    "description": "Rich, hearty North Indian classics cooked with authentic spices. From creamy dals to tandoori specialties, our Punjabi menu is a celebration of bold flavours.",
+    "items": [
+      {
+        "id": "pun-dal-makhani",
+        "name": "Dal Makhani",
+        "price": 180,
+        "isVeg": true,
+        "description": "Slow-cooked whole black lentils and kidney beans simmered overnight in a rich tomato-butter-cream gravy.",
+        "image": "/images/dining/dal-makhani.jpeg"
+      },
+      {
+        "id": "pun-butter-chicken",
+        "name": "Butter Chicken",
+        "price": 260,
+        "isVeg": false,
+        "description": "Tender chicken marinated in yoghurt and spices, grilled in tandoor, then simmered in a velvety tomato-cream sauce.",
+        "image": "/images/dining/butter-chicken.jpg"
+      },
+      {
+        "id": "pun-paneer-tikka",
+        "name": "Paneer Tikka",
+        "price": 220,
+        "isVeg": true,
+        "description": "Cubes of fresh cottage cheese marinated in spiced yoghurt, skewered and grilled to perfection in a clay oven.",
+        "image": "/images/dining/paneer-tikka.jpg"
+      },
+      {
+        "id": "pun-naan",
+        "name": "Assorted Naan Basket",
+        "price": 90,
+        "isVeg": true,
+        "description": "A basket of freshly baked naan — plain, butter, garlic, or stuffed — straight from the tandoor.",
+        "image": "/images/dining/naan.jpg"
+      },
+      {
+        "id": "pun-lassi",
+        "name": "Sweet Lassi",
+        "price": 80,
+        "isVeg": true,
+        "description": "Thick, chilled yoghurt drink blended with sugar and cardamom — the perfect accompaniment to a Punjabi feast.",
+        "image": "/images/dining/masala-dosa.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "gujarati",
+    "name": "Gujarati",
+    "description": "Gujarat's celebrated thali tradition brought to life — a harmonious balance of sweet, tangy, and spicy flavours across seasonal vegetables and wholesome dals.",
+    "items": [
+      {
+        "id": "guj-thali",
+        "name": "Gujarati Thali",
+        "price": 220,
+        "isVeg": true,
+        "description": "A complete meal — dal, sabzi, roti, rice, kadhi, papad, pickle, and a sweet — all in one satisfying thali.",
+        "image": "/images/dining/guj-thali.jpeg"
+      },
+      {
+        "id": "guj-dhokla",
+        "name": "Steamed Dhokla",
+        "price": 100,
+        "isVeg": true,
+        "description": "Soft, spongy fermented chickpea cake tempered with mustard seeds and green chilli. A Gujarati breakfast staple.",
+        "image": "/images/dining/dhokla.jpg"
+      },
+      {
+        "id": "guj-undhiyu",
+        "name": "Undhiyu",
+        "price": 180,
+        "isVeg": true,
+        "description": "A seasonal winter delicacy of mixed vegetables and fenugreek dumplings slow-cooked with spiced coconut masala.",
+        "image": "/images/dining/undhiyu.jpg"
+      },
+      {
+        "id": "guj-kadhi",
+        "name": "Gujarati Kadhi",
+        "price": 120,
+        "isVeg": true,
+        "description": "A light, slightly sweet yoghurt-based curry with curry leaves and mustard tempering — comforting and unique.",
+        "image": "/images/dining/kadhi.jpg"
+      }
+    ]
+  },
+  {
+    "id": "south-indian",
+    "name": "South Indian",
+    "description": "Crispy dosas, fluffy idlis, and aromatic sambhar — our South Indian section brings the authentic tastes of the South to Navsari.",
+    "items": [
+      {
+        "id": "si-masala-dosa",
+        "name": "Masala Dosa",
+        "price": 140,
+        "isVeg": true,
+        "description": "A golden, paper-thin rice crepe filled with spiced potato masala. Served with coconut chutney and sambar.",
+        "image": "/images/dining/masala-dosa.jpeg"
+      },
+      {
+        "id": "si-idli",
+        "name": "Idli Sambar (4 pcs)",
+        "price": 100,
+        "isVeg": true,
+        "description": "Soft, steamed rice and lentil cakes served with a bowl of lentil vegetable stew and three chutneys.",
+        "image": "/images/dining/idli.jpg"
+      },
+      {
+        "id": "si-vada",
+        "name": "Medu Vada (2 pcs)",
+        "price": 90,
+        "isVeg": true,
+        "description": "Crunchy deep-fried lentil doughnuts with a soft interior. Best enjoyed dunked in sambar.",
+        "image": "/images/dining/medu-vada.jpg"
+      },
+      {
+        "id": "si-uttapam",
+        "name": "Onion Uttapam",
+        "price": 130,
+        "isVeg": true,
+        "description": "A thick, savoury rice pancake topped with finely chopped onions, tomatoes, and green chillies.",
+        "image": "/images/dining/uttapam.jpg"
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "name": "Chinese (Desi)",
+    "description": "Indian-Chinese fusion classics — the comfort food that never fails to delight. Saucy, bold, and utterly satisfying.",
+    "items": [
+      {
+        "id": "ch-veg-fried-rice",
+        "name": "Veg Fried Rice",
+        "price": 160,
+        "isVeg": true,
+        "description": "Wok-tossed long-grain rice with seasonal vegetables, soy sauce, and a hint of sesame oil.",
+        "image": "/images/dining/fried-rice.jpg"
+      },
+      {
+        "id": "ch-manchurian",
+        "name": "Gobi Manchurian (Dry)",
+        "price": 170,
+        "isVeg": true,
+        "description": "Crispy cauliflower fritters tossed in a tangy garlic-ginger-soy sauce. A crowd favourite.",
+        "image": "/images/dining/manchurian.jpg"
+      },
+      {
+        "id": "ch-hakka-noodles",
+        "name": "Veg Hakka Noodles",
+        "price": 160,
+        "isVeg": true,
+        "description": "Thin egg-free noodles stir-fried with fresh vegetables and classic Indo-Chinese seasonings.",
+        "image": "/images/dining/hakka-noodles.jpg"
+      }
+    ]
+  },
+  {
+    "id": "snacks-beverages",
+    "name": "Snacks & Beverages",
+    "description": "Light bites and refreshing drinks for any time of day — from a quick chai to an evening snack spread.",
+    "items": [
+      {
+        "id": "sb-chai",
+        "name": "Masala Chai",
+        "price": 30,
+        "isVeg": true,
+        "description": "Freshly brewed spiced tea with ginger, cardamom, and cinnamon — the perfect morning companion.",
+        "image": "/images/dining/chai.jpg"
+      },
+      {
+        "id": "sb-sandwich",
+        "name": "Grilled Veg Sandwich",
+        "price": 100,
+        "isVeg": true,
+        "description": "A buttery grilled sandwich loaded with seasonal vegetables and green chutney. Served with tomato ketchup.",
+        "image": "/images/dining/sandwich.jpg"
+      },
+      {
+        "id": "sb-samosa",
+        "name": "Samosa (2 pcs)",
+        "price": 50,
+        "isVeg": true,
+        "description": "Crispy pastry shells filled with spiced potato and peas. Served hot with tamarind chutney.",
+        "image": "/images/dining/samosa.jpg"
+      },
+      {
+        "id": "sb-fresh-juice",
+        "name": "Fresh Lime Soda",
+        "price": 60,
+        "isVeg": true,
+        "description": "A refreshing blend of fresh lime juice, soda water, and your choice of sweet, salt, or masala.",
+        "image": "/images/dining/lime-soda.jpg"
+      }
+    ]
+  }
+]
+

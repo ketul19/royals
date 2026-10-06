@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#1a1a1a"/>
+  <rect x="1" y="1" width="798" height="498" fill="none" stroke="#c9a84c" stroke-width="2" opacity="0.3"/>
+  <!-- Diagonal lines pattern -->
+  <pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#c9a84c" stroke-width="0.5" opacity="0.08"/>
+  </pattern>
+  <rect width="800" height="500" fill="url(#p)"/>
+  <!-- Crown icon -->
+  <text x="400" y="220" text-anchor="middle" font-size="48" fill="#c9a84c" opacity="0.4">♛</text>
+  <!-- Label -->
+  <text x="400" y="270" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#c9a84c" opacity="0.7">hostel 2</text>
+  <text x="400" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#8a8279">Royal's Inn — Placeholder Image</text>
+</svg>

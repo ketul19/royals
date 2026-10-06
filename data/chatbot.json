@@ -1,0 +1,52 @@
+{
+  "welcomeMessage": "Welcome to Royal's Inn! 👋 I'm here to help. Ask me anything about our rooms, dining, events, or how to reach us.",
+  "fallbackResponse": "I'm not sure about that one — but our team knows everything! 💬 Tap the WhatsApp button above to chat with us directly and get an instant answer.",
+  "quickReplies": [
+    "Rooms",
+    "Hostel",
+    "Dining",
+    "Events",
+    "Amenities",
+    "Location",
+    "Contact"
+  ],
+  "rules": [
+    {
+      "keywords": ["room", "rooms", "ac room", "non-ac", "nonac", "deluxe", "suite", "accommodation", "stay", "book", "booking", "reserve", "reservation"],
+      "response": "We offer AC Deluxe Rooms (₹1,800/night), AC Twin Rooms (₹2,200/night), AC Suites (₹3,200/night), and Non-AC rooms from ₹900/night. All rooms include free Wi-Fi, hot water, and LED TV. 🏨 Want to book? Tap WhatsApp above for instant confirmation!"
+    },
+    {
+      "keywords": ["hostel", "dormitory", "dorm", "bunk", "backpacker", "budget", "cheap"],
+      "response": "Our Hostel wing has Dormitory Beds from ₹350/bed and Private Hostel Rooms from ₹650. All include free Wi-Fi, secure lockers, and access to our common social area. 🎒 Perfect for solo travellers!"
+    },
+    {
+      "keywords": ["food", "dining", "restaurant", "menu", "eat", "breakfast", "lunch", "dinner", "meal", "table", "thali", "dosa", "dal"],
+      "response": "Our restaurant 'The Table' serves Punjabi, Gujarati, South Indian, and Chinese cuisine. Highlights: Gujarati Thali (₹220), Masala Dosa (₹140), Butter Chicken (₹260), Dal Makhani (₹180). 🍛 All freshly prepared!"
+    },
+    {
+      "keywords": ["event", "events", "wedding", "birthday", "party", "celebration", "function", "hall", "occasion", "reception", "banquet"],
+      "response": "Royal's Inn hosts weddings, birthday parties, corporate events, and social gatherings. Our event spaces can be customized with decor and catering. 🎊 Contact us on WhatsApp to discuss your event requirements!"
+    },
+    {
+      "keywords": ["amenity", "amenities", "facilities", "wifi", "wi-fi", "parking", "hot water", "tv", "locker"],
+      "response": "Our amenities include: Free High-Speed Wi-Fi 📶, 24/7 Hot Water, LED TVs, Room Service, Personal Lockers (hostel), Common Lounge, and on-site Dining. Need anything specific? Chat with us on WhatsApp!"
+    },
+    {
+      "keywords": ["location", "address", "where", "directions", "map", "navsari", "how to reach", "reach", "dgvcl"],
+      "response": "We're located at: Eru Aat Road, opp. DGVCL office, Eru Char Rasta, Navsari, Gujarat 396450. 📍 Easy to find, close to the city centre. Get directions on Google Maps via our Contact page!"
+    },
+    {
+      "keywords": ["contact", "phone", "number", "call", "whatsapp", "reach us", "talk"],
+      "response": "You can reach us at 📞 +91 95587 84840 or tap the WhatsApp button at the top of this chat for an instant reply from our team. We're available daily!"
+    },
+    {
+      "keywords": ["price", "prices", "pricing", "cost", "rate", "rates", "tariff", "charge", "fee", "how much"],
+      "response": "Room rates: AC Deluxe ₹1,800 · AC Twin ₹2,200 · AC Suite ₹3,200 · Non-AC Standard ₹900 · Hostel Bed ₹350. Prices may vary by season. 💰 WhatsApp us for current availability and special offers!"
+    },
+    {
+      "keywords": ["checkin", "check in", "check-in", "checkout", "check out", "check-out", "timing", "time"],
+      "response": "Check-in: 12:00 PM | Check-out: 11:00 AM. Early check-in and late check-out may be available on request — just WhatsApp us! ⏰"
+    }
+  ]
+}
+

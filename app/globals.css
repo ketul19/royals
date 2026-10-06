@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+/* ============================================================
+   ROYAL'S INN — DESIGN SYSTEM
+   Color tokens are defined as CSS custom properties so the
+   entire palette can be updated by changing values here only.
+   WCAG AA contrast must be verified against any new palette.
+   All component files reference these variables — zero
+   hardcoded hex values are used in component JSX/TSX.
+   ============================================================ */
+
+@theme inline {
+  /* ── Typography ─────────────────────────────────────────── */
+  --font-display: var(--font-cormorant);   /* Display serif — hero headings, editorial */
+  --font-sans:    var(--font-inter);       /* Clean sans — body, UI, captions */
+
+  /* Modular type scale (px reference → Tailwind rem) */
+  --text-xs:   0.75rem;   /* 12px */
+  --text-sm:   0.875rem;  /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg:   1.25rem;   /* 20px */
+  --text-xl:   1.75rem;   /* 28px */
+  --text-2xl:  2.5rem;    /* 40px */
+  --text-3xl:  4rem;      /* 64px */
+  --text-4xl:  6rem;      /* 96px */
+
+  /* ── Color Tokens ───────────────────────────────────────── */
+  /* Dark-first base palette — swap values here to re-theme */
+  --color-bg-primary:    #0d0d0d;   /* Main page background */
+  --color-bg-elevated:   #161616;   /* Cards, panels, modal surface */
+  --color-bg-card:       #1a1a1a;   /* Slightly lighter card bg */
+  --color-text-primary:  #f0ece4;   /* Primary readable text */
+  --color-text-muted:    #8a8279;   /* Secondary / caption text */
+  --color-accent:        #c9a84c;   /* Gold accent — buttons, borders, icons */
+  --color-accent-light:  #e8c97e;   /* Lighter gold for hover states */
+  --color-accent-dark:   #a07830;   /* Darker gold for pressed states */
+  --color-border:        #2a2520;   /* Subtle dividers and borders */
+  --color-border-accent: #3d3020;   /* Slightly more visible border */
+  --color-overlay:       rgba(0, 0, 0, 0.75);  /* Modal/lightbox overlay */
+
+  /* ── Radius Tokens ──────────────────────────────────────── */
+  --radius-sm:   0.375rem;  /* 6px  — tags, badges */
+  --radius-md:   0.75rem;   /* 12px — cards */
+  --radius-lg:   1rem;      /* 16px — modals, panels */
+  --radius-xl:   1.5rem;    /* 24px — hero overlays */
+  --radius-full: 9999px;    /* Pills, circular buttons */
+
+  /* ── Shadow Tokens ──────────────────────────────────────── */
+  --shadow-card:   0 2px 16px 0 rgba(0, 0, 0, 0.4);
+  --shadow-modal:  0 8px 64px 0 rgba(0, 0, 0, 0.7);
+  --shadow-accent: 0 4px 24px 0 rgba(201, 168, 76, 0.2);
+
+  /* ── Motion Timing Scale ────────────────────────────────── */
+  --duration-fast:   150ms;   /* Hover micro-interactions */
+  --duration-base:   250ms;   /* Standard transitions */
+  --duration-slow:   400ms;   /* Modal entrances, overlay fades */
+  --duration-hero:   900ms;   /* Loader SVG draw, hero text stagger */
+
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ── Global Reset & Base ─────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Display / heading font */
+h1, h2, h3, h4, h5, h6,
+.font-display {
+  font-family: var(--font-display, 'Georgia', serif);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* ── Focus Styles ────────────────────────────────────────── */
+/* Visible focus rings for keyboard navigation (WCAG 2.4.7) */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Selection ───────────────────────────────────────────── */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg-primary);
+}
+
+/* ── Scrollbar (webkit) ──────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-accent);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-dark);
+}
+
+/* ── prefers-reduced-motion ──────────────────────────────── */
+/* Framer Motion checks this hook; this CSS rule ensures that
+   any CSS transitions/animations also respect the preference. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Leaflet map container override ──────────────────────── */
+.leaflet-container {
+  background: var(--color-bg-primary) !important;
+  font-family: var(--font-sans) !important;
+}
+.leaflet-popup-content-wrapper {
+  background: var(--color-bg-elevated) !important;
+  color: var(--color-text-primary) !important;
+  border: 1px solid var(--color-border-accent) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-modal) !important;
+}
+.leaflet-popup-tip {
+  background: var(--color-bg-elevated) !important;
+}
+
+
+/* ── Accent button hover (CSS-only, no JS needed in server components) ─── */
+.about-cta-btn:hover {
+  background-color: var(--color-accent-light) !important;
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "ac-deluxe",
+    "category": "AC",
+    "name": "AC Deluxe Room",
+    "pricePerNight": 1800,
+    "priceUnit": "per room",
+    "maxGuests": 2,
+    "beds": 1,
+    "description": "A spacious air-conditioned deluxe room with modern furnishings, ideal for couples and solo travellers seeking a comfortable retreat after exploring Navsari.",
+    "amenities": ["Air Conditioning", "Private Bathroom", "Free Wi-Fi", "LED TV", "Hot Water", "Room Service", "Wardrobe", "Study Desk"],
+    "images": [
+      "/images/rooms/R4.jpeg",
+      "/images/rooms/R5.jpeg"
+    ],
+    "ctaMessage": "Hi! I'd like to enquire about the AC Deluxe Room at Royal's Inn. Could you please share availability and details?"
+  },
+  {
+    "id": "ac-twin",
+    "category": "AC",
+    "name": "AC Twin Room",
+    "pricePerNight": 2200,
+    "priceUnit": "per room",
+    "maxGuests": 2,
+    "beds": 2,
+    "description": "Two single beds in a fully air-conditioned room — perfect for colleagues or friends travelling together. Enjoy modern amenities in a clean, well-lit space.",
+    "amenities": ["Air Conditioning", "Two Single Beds", "Free Wi-Fi", "LED TV", "Hot Water", "Private Bathroom", "Room Service"],
+    "images": [
+      "/images/rooms/R3.jpeg",
+      "/images/rooms/R2.jpeg"
+    ],
+    "ctaMessage": "Hi! I'd like to enquire about the AC Twin Room at Royal's Inn. Could you please share availability?"
+  },
+  {
+    "id": "ac-suite",
+    "category": "AC",
+    "name": "AC Suite",
+    "pricePerNight": 3200,
+    "priceUnit": "per room",
+    "maxGuests": 3,
+    "beds": 1,
+    "description": "Our premium AC suite offers a king-size bed, an exclusive sitting area, and premium furnishings. Ideal for families and business travellers who expect the best.",
+    "amenities": ["Air Conditioning", "King Bed", "Sitting Area", "Free Wi-Fi", "Smart TV", "Mini Fridge", "Hot Water", "Premium Toiletries", "Room Service", "Wardrobe"],
+    "images": [
+      "/images/rooms/R6.jpeg",
+      "/images/rooms/R7.jpeg"
+    ],
+    "ctaMessage": "Hi! I'm interested in booking the AC Suite at Royal's Inn. Please share availability and pricing."
+  },
+  {
+    "id": "nonac-standard",
+    "category": "Non-AC",
+    "name": "Non-AC Standard Room",
+    "pricePerNight": 900,
+    "priceUnit": "per room",
+    "maxGuests": 2,
+    "beds": 1,
+    "description": "A clean, comfortable standard room with ceiling fan — an excellent budget choice for travellers who want value without compromise on cleanliness and service.",
+    "amenities": ["Ceiling Fan", "Private Bathroom", "Free Wi-Fi", "LED TV", "Hot Water", "Wardrobe"],
+    "images": [
+      "/images/rooms/R8.jpeg",
+      "/images/rooms/R9.jpeg"
+    ],
+    "ctaMessage": "Hi! I'd like to enquire about the Non-AC Standard Room at Royal's Inn. Please share availability."
+  },
+  {
+    "id": "nonac-twin",
+    "category": "Non-AC",
+    "name": "Non-AC Twin Room",
+    "pricePerNight": 1200,
+    "priceUnit": "per room",
+    "maxGuests": 2,
+    "beds": 2,
+    "description": "Two single beds in a non-AC room with ceiling fan — a budget-friendly option for friends or colleagues. Clean linen, shared Wi-Fi, and a private bathroom.",
+    "amenities": ["Ceiling Fan", "Two Single Beds", "Private Bathroom", "Free Wi-Fi", "LED TV", "Hot Water"],
+    "images": [
+      "/images/rooms/R6.jpeg",
+      "/images/rooms/R7.jpeg"
+    ],
+    "ctaMessage": "Hi! I'd like to enquire about the Non-AC Twin Room at Royal's Inn. Please share availability."
+  },
+  {
+    "id": "hostel-bed",
+    "category": "Hostel",
+    "name": "Hostel Dormitory Bed",
+    "pricePerNight": 350,
+    "priceUnit": "per bed",
+    "maxGuests": 1,
+    "beds": 1,
+    "description": "Affordable dormitory-style accommodation in our hostel wing. Bunk beds in a shared room with secure lockers — perfect for solo backpackers and budget travellers.",
+    "amenities": ["Bunk Bed", "Personal Locker", "Shared Bathroom", "Free Wi-Fi", "Ceiling Fan", "Common Area Access"],
+    "images": [
+      "/images/rooms/R4.jpeg",
+      "/images/rooms/R5.jpeg"
+    ],
+    "ctaMessage": "Hi! I'd like to book a hostel bed at Royal's Inn. Please share availability and dorm details."
+  },
+  {
+    "id": "hostel-private",
+    "category": "Hostel",
+    "name": "Hostel Private Room",
+    "pricePerNight": 650,
+    "priceUnit": "per room",
+    "maxGuests": 2,
+    "beds": 1,
+    "description": "A private room in our hostel wing — the best of both worlds. All the social atmosphere of the hostel with the privacy of your own room and lock.",
+    "amenities": ["Private Room", "Ceiling Fan", "Shared Bathroom", "Free Wi-Fi", "Personal Locker", "Common Area Access"],
+    "images": [
+      "/images/rooms/R8.jpeg",
+      "/images/rooms/R9.jpeg"
+    ],
+    "ctaMessage": "Hi! I'd like to enquire about the Hostel Private Room at Royal's Inn. Please share availability."
+  }
+]

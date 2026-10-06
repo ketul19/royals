@@ -1,0 +1,81 @@
+{
+  "name": "Royal's Inn Hotel",
+  "tagline": "Where Comfort Meets Heritage",
+  "logoSvgPath": "/images/logo.svg",
+  "address": "Eru Aat Road, opp. DGVCL office, Eru Char Rasta, Navsari, Gujarat 396450",
+  "phone": "+91 95587 84840",
+  "whatsappNumber": "919558784840",
+  "googleRating": 4.5,
+  "googleReviewUrl": null,
+  "googleProfileUrl": null,
+  "socials": [
+    { "platform": "instagram", "url": "https://www.instagram.com/" },
+    { "platform": "facebook", "url": "https://www.facebook.com/" }
+  ],
+  "mapCoordinates": { "lat": 20.9494, "lng": 72.9320 },
+  "homePage": {
+    "hero": {
+      "sectionLabel": { "index": "01", "label": "Welcome to Royal's Inn" },
+      "words": ["ROYAL'S", "INN"],
+      "accentWord": "INN",
+      "backgroundImage": "/images/rooms/R2.jpeg",
+      "imageAlt": "Royal's Inn Hotel exterior",
+      "ctaText": "Enquire on WhatsApp",
+      "ctaMessage": "Hi! I'd like to enquire about room availability at Royal's Inn, Navsari."
+    },
+    "about": {
+      "sectionLabel": { "index": "02", "label": "About Us" },
+      "heading": "Authentic Hospitality in the Heart of Navsari",
+      "paragraphs": [
+        "Nestled in the cultural city of Navsari, Royal's Inn is more than a place to sleep — it's a home away from home. We welcome every guest with warmth, clean spaces, and genuine care that transforms a stay into a memory.",
+        "Whether you're a business traveller, a family on a pilgrimage, or a budget backpacker, our combined hotel and hostel gives you the right fit — from premium AC suites to affordable hostel dorms — all under one roof."
+      ],
+      "image": "/images/rooms/R3.jpeg",
+      "imageAlt": "Royal's Inn hotel exterior in Navsari",
+      "linkText": "Our Story",
+      "linkUrl": "/about"
+    },
+    "rooms": {
+      "sectionLabel": { "index": "03", "label": "Rooms & Hostel" },
+      "heading": "Where You'll Stay",
+      "linkText": "All Rooms",
+      "viewDetailsText": "View Details",
+      "bookText": "Book",
+      "guestsLabel": "guests",
+      "guestLabel": "guest",
+      "bedsLabel": "beds",
+      "bedLabel": "bed",
+      "categoryColors": {
+        "AC": "#d4a574",
+        "Non-AC": "#7eb8c4",
+        "Hostel": "#a078c4"
+      }
+    },
+    "dining": {
+      "sectionLabel": { "index": "04", "label": "Dining" },
+      "heading": "The Table",
+      "description": "Punjabi, Gujarati, South Indian, and more — all freshly prepared in our on-site restaurant.",
+      "linkText": "Full Menu"
+    },
+    "gallery": {
+      "sectionLabel": { "index": "05", "label": "Gallery" },
+      "heading": "Moments & Spaces",
+      "linkText": "Full Gallery"
+    },
+    "testimonials": {
+      "sectionLabel": { "index": "06", "label": "Guest Reviews" },
+      "heading": "Loved by Our Guests",
+      "badgeText": "on Google",
+      "linkText": "All Reviews"
+    },
+    "location": {
+      "sectionLabel": { "index": "07", "label": "Find Us" },
+      "heading": "Conveniently Located in Navsari",
+      "whatsappButtonText": "Chat on WhatsApp",
+      "whatsappMessage": "Hi! I'd like to reach Royal's Inn. Can you confirm the directions?",
+      "viewMapText": "View Map",
+      "mapPlaceholderPrimary": "Click to open in Google Maps",
+      "mapPlaceholderSecondary": "Interactive map available on the Contact page"
+    }
+  }
+}

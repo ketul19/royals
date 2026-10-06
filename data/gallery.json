@@ -9,26 +9,27 @@
         "images": [
           { "src": "/images/gallery/events/W1.jpg", "alt": "Beautifully decorated wedding hall at Royal's Inn", "caption": "Grand Wedding Hall" },
           { "src": "/images/gallery/events/W1.jpg", "alt": "Wedding reception setup with floral decorations", "caption": "Reception Decor" },
-          { "src": "/images/gallery/events/wedding-3.jpg", "alt": "Wedding ceremony mandap setup", "caption": "Mandap Ceremony" },
-          { "src": "/images/gallery/events/wedding-4.jpg", "alt": "Wedding dinner banquet arrangement", "caption": "Banquet Dinner" }
+          { "src": "/images/gallery/events/W4.jpg", "alt": "Wedding ceremony mandap setup", "caption": "Mandap Ceremony" },
+          { "src": "/images/gallery/events/W5.jpg", "alt": "Wedding dinner banquet arrangement", "caption": "Banquet Dinner" },
+          { "src": "/images/gallery/events/W6.jpg", "alt": "Wedding ceremony mandap setup", "caption": "Mandap Ceremony" }
         ]
       },
       {
         "id": "birthday",
         "name": "Birthday",
         "images": [
-          { "src": "/images/gallery/events/birthday-1.jpg", "alt": "Birthday celebration setup with balloons and cake", "caption": "Birthday Party Setup" },
-          { "src": "/images/gallery/events/birthday-2.jpg", "alt": "Intimate birthday dinner arrangement", "caption": "Intimate Celebration" },
-          { "src": "/images/gallery/events/birthday-3.jpg", "alt": "Birthday party with colourful decorations", "caption": "Festive Decor" }
+          { "src": "/images/gallery/events/B1.jpg", "alt": "Birthday celebration setup with balloons and cake", "caption": "Birthday Party Setup" },
+          { "src": "/images/gallery/events/B2.jpg", "alt": "Intimate birthday dinner arrangement", "caption": "Intimate Celebration" },
+          { "src": "/images/gallery/events/B3.jpg", "alt": "Birthday party with colourful decorations", "caption": "Festive Decor" }
         ]
       },
       {
         "id": "party",
         "name": "Party",
         "images": [
-          { "src": "/images/gallery/events/party-1.jpg", "alt": "Corporate party setup at Royal's Inn event hall", "caption": "Corporate Gathering" },
-          { "src": "/images/gallery/events/party-2.jpg", "alt": "Social get-together event at the hotel", "caption": "Social Evening" },
-          { "src": "/images/gallery/events/party-3.jpg", "alt": "Festive celebration event with guests", "caption": "Festive Evening" }
+          { "src": "/images/gallery/events/P1.jpg", "alt": "Corporate party setup at Royal's Inn event hall", "caption": "Corporate Gathering" },
+          { "src": "/images/gallery/events/P2.jpg", "alt": "Social get-together event at the hotel", "caption": "Social Evening" },
+          { "src": "/images/gallery/events/P3.jpg", "alt": "Festive celebration event with guests", "caption": "Festive Evening" }
         ]
       }
     ]
@@ -41,37 +42,37 @@
         "id": "rooms-gallery",
         "name": "Rooms",
         "images": [
-          { "src": "/images/gallery/spaces/room-1.jpg", "alt": "Comfortable AC deluxe room interior at Royal's Inn", "caption": "AC Deluxe Room" },
-          { "src": "/images/gallery/spaces/room-2.jpg", "alt": "Non-AC standard room with clean furnishings", "caption": "Standard Room" },
-          { "src": "/images/gallery/spaces/room-3.jpg", "alt": "Bright and airy hotel room with natural light", "caption": "Bright Suite" },
-          { "src": "/images/gallery/spaces/room-4.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" }
+          { "src": "/images/gallery/spaces/G1.jpg", "alt": "Comfortable AC deluxe room interior at Royal's Inn", "caption": "AC Deluxe Room" },
+          { "src": "/images/gallery/spaces/G2.jpg", "alt": "Non-AC standard room with clean furnishings", "caption": "Standard Room" },
+          { "src": "/images/gallery/spaces/G4.jpg", "alt": "Bright and airy hotel room with natural light", "caption": "Bright Suite" },
+          { "src": "/images/gallery/spaces/G5.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" }
         ]
       },
       {
         "id": "amenities-gallery",
         "name": "Amenities",
         "images": [
-          { "src": "/images/gallery/spaces/amenity-1.jpg", "alt": "Hotel lobby and reception area at Royal's Inn", "caption": "Lobby & Reception" },
-          { "src": "/images/gallery/spaces/amenity-2.jpg", "alt": "Dining area at The Table restaurant", "caption": "The Table Restaurant" },
-          { "src": "/images/gallery/spaces/amenity-3.jpg", "alt": "Comfortable common lounge area for guests", "caption": "Guest Lounge" }
+          { "src": "/images/gallery/spaces/G1.jpg", "alt": "Hotel lobby and reception area at Royal's Inn", "caption": "Lobby & Reception" },
+          { "src": "/images/gallery/spaces/G2.jpg", "alt": "Dining area at The Table restaurant", "caption": "The Table Restaurant" },
+          { "src": "/images/gallery/spaces/G5.jpg", "alt": "Comfortable common lounge area for guests", "caption": "Guest Lounge" }
         ]
       },
       {
         "id": "surroundings",
         "name": "Surroundings",
         "images": [
-          { "src": "/images/gallery/spaces/surrounding-1.jpg", "alt": "Navsari city view from Royal's Inn", "caption": "City View" },
-          { "src": "/images/gallery/spaces/surrounding-2.jpg", "alt": "Nearby Navsari landmarks and streets", "caption": "Local Heritage" },
-          { "src": "/images/gallery/spaces/surrounding-3.jpg", "alt": "Hotel exterior and entrance view", "caption": "Hotel Exterior" }
+          { "src": "/images/gallery/spaces/G1.jpg", "alt": "Navsari city view from Royal's Inn", "caption": "City View" },
+          { "src": "/images/gallery/spaces/G2.jpg", "alt": "Nearby Navsari landmarks and streets", "caption": "Local Heritage" },
+          { "src": "/images/gallery/spaces/G5.jpg", "alt": "Hotel exterior and entrance view", "caption": "Hotel Exterior" }
         ]
       },
       {
         "id": "hostel-gallery",
         "name": "Hostel",
         "images": [
-          { "src": "/images/gallery/spaces/hostel-1.jpg", "alt": "Clean hostel dormitory with bunk beds at Royal's Inn", "caption": "Hostel Dorm" },
-          { "src": "/images/gallery/spaces/hostel-2.jpg", "alt": "Hostel common area and social space", "caption": "Common Area" },
-          { "src": "/images/gallery/spaces/hostel-3.jpg", "alt": "Hostel private room interior", "caption": "Private Room" }
+          { "src": "/images/gallery/spaces/G1.jpg", "alt": "Clean hostel dormitory with bunk beds at Royal's Inn", "caption": "Hostel Dorm" },
+          { "src": "/images/gallery/spaces/G2.jpg", "alt": "Hostel common area and social space", "caption": "Common Area" },
+          { "src": "/images/gallery/spaces/G5.jpg", "alt": "Hostel private room interior", "caption": "Private Room" }
         ]
       }
     ]

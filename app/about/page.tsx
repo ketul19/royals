@@ -115,7 +115,7 @@ export default function AboutPage() {
               style={{ boxShadow: 'var(--shadow-card)' }}
             >
               <Image
-                src="/images/gallery/spaces/amenity-1.svg"
+                src="/images/gallery/spaces/G2.jpg"
                 alt="Royal's Inn lobby and reception area"
                 width={800}
                 height={600}
@@ -195,7 +195,7 @@ export default function AboutPage() {
               style={{ boxShadow: 'var(--shadow-card)' }}
             >
               <Image
-                src="/images/gallery/spaces/hostel-1.svg"
+                src="/images/gallery/spaces/G1.jpg"
                 alt="Royal's Inn hostel dormitory with bunk beds"
                 width={800}
                 height={600}

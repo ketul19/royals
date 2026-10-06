@@ -30,7 +30,7 @@ function DishCard({ dish, onViewDetails }: { dish: DishItem; onViewDetails: (d: 
         aria-label={`View details for ${dish.name}`}
       >
         <Image
-          src={dish.image.replace('.jpg', '.svg')}
+          src={dish.image}
           alt={dish.name}
           fill
           className="object-cover transition-transform duration-[var(--duration-slow)] group-hover:scale-[1.05]"
@@ -66,7 +66,7 @@ function DishDetailModal({ dish, isOpen, onClose }: { dish: DishItem | null; isO
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={dish.name}>
       <div className="relative overflow-hidden" style={{ aspectRatio: '4/3' }}>
-        <Image src={dish.image.replace('.jpg', '.svg')} alt={dish.name} fill className="object-cover" sizes="(max-width: 768px) 100vw, 768px" priority />
+        <Image src={dish.image} alt={dish.name} fill className="object-cover" sizes="(max-width: 768px) 100vw, 768px" priority />
         <span
           className="absolute left-4 top-4 rounded-full px-3 py-1 text-xs font-semibold"
           style={{ backgroundColor: dish.isVeg ? '#22c55e' : '#ef4444', color: '#fff' }}

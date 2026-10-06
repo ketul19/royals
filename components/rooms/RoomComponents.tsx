@@ -25,7 +25,7 @@ interface RoomCardProps {
 
 export function RoomCard({ room, onViewDetails }: RoomCardProps) {
   const shouldReduce = useReducedMotion();
-  const imgSrc = room.images[0].replace('.jpg', '.svg');
+  const imgSrc = room.images[0];
 
   return (
     <motion.article
@@ -140,7 +140,7 @@ export function RoomDetailModal({ room, isOpen, onClose }: RoomDetailModalProps)
 
   if (!room) return null;
 
-  const images = room.images.map((img) => img.replace('.jpg', '.svg'));
+  const images = room.images.map((img) => img);
   const prev = () => setImgIndex((i) => (i - 1 + images.length) % images.length);
   const next = () => setImgIndex((i) => (i + 1) % images.length);
 

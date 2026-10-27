@@ -12,7 +12,7 @@
   ],
   "rules": [
     {
-      "keywords": ["room", "rooms", "ac room", "non-ac", "deluxe", "suite", "accommodation", "stay", "book", "booking", "reserve", "reservation"],
+      "keywords": ["room", "rooms", "ac room", "non-ac", "nonac", "deluxe", "suite", "accommodation", "stay", "book", "booking", "reserve", "reservation"],
       "response": "We offer AC Deluxe Rooms (₹1,800/night), AC Twin Rooms (₹2,200/night), AC Suites (₹3,200/night), and Non-AC rooms from ₹900/night. All rooms include free Wi-Fi, hot water, and LED TV. 🏨 Want to book? Tap WhatsApp above for instant confirmation!"
     },
     {

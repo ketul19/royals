@@ -59,6 +59,29 @@
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* ── Light Theme Palette ──────────────────────────────────────────────────────
+   Applied when <html data-theme="light">.
+   Warm ivory / rich linen palette — luxury hotel brand aesthetic.
+   Gold accent shifts slightly deeper for WCAG AA contrast on light surfaces.
+   ALL other components remain unchanged — they inherit from these overrides.
+   ──────────────────────────────────────────────────────────────────────────── */
+[data-theme="light"] {
+  --color-bg-primary:    #faf8f4;              /* Warm ivory — main background */
+  --color-bg-elevated:   #f2ede5;              /* Warm linen — cards, panels */
+  --color-bg-card:       #ede8df;              /* Warm sand — card surface */
+  --color-text-primary:  #1a1410;              /* Rich dark brown — primary text */
+  --color-text-muted:    #6b5e50;              /* Warm taupe — secondary text */
+  --color-accent:        #b8892a;              /* Deeper gold — readable on ivory */
+  --color-accent-light:  #d4a84c;              /* Standard gold for hover states */
+  --color-accent-dark:   #8b6820;              /* Dark gold for pressed states */
+  --color-border:        #d5ccc0;              /* Light warm dividers */
+  --color-border-accent: #c9bfb0;              /* Slightly more visible warm border */
+  --color-overlay:       rgba(0, 0, 0, 0.60);  /* Slightly lighter overlay */
+  --shadow-card:         0 2px 16px 0 rgba(100, 80, 50, 0.10);
+  --shadow-modal:        0 8px 64px 0 rgba(100, 80, 50, 0.20);
+  --shadow-accent:       0 4px 24px 0 rgba(184, 137, 42, 0.20);
+}
+
 /* ── Global Reset & Base ─────────────────────────────────── */
 *,
 *::before,
@@ -80,6 +103,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  /* Smooth colour transition when theme toggles */
+  transition:
+    background-color var(--duration-slow) var(--ease-smooth),
+    color var(--duration-slow) var(--ease-smooth);
 }
 
 /* Display / heading font */
@@ -154,4 +181,24 @@ h1, h2, h3, h4, h5, h6,
 /* ── Accent button hover (CSS-only, no JS needed in server components) ─── */
 .about-cta-btn:hover {
   background-color: var(--color-accent-light) !important;
+}
+
+/* ── Theme toggle pill ────────────────────────────────────── */
+/* Smooth border and background transitions on the toggle pill */
+.theme-toggle-pill {
+  transition:
+    background-color var(--duration-base) var(--ease-smooth),
+    border-color var(--duration-base) var(--ease-smooth);
+}
+.theme-toggle-dot {
+  transition: transform var(--duration-base) var(--ease-smooth);
+}
+
+/* ── Nearby Locations card theme transitions ─────────────── */
+.nearby-card {
+  transition:
+    background-color var(--duration-slow) var(--ease-smooth),
+    border-color var(--duration-base) var(--ease-smooth),
+    box-shadow var(--duration-base) var(--ease-smooth),
+    transform var(--duration-fast) var(--ease-smooth);
 }

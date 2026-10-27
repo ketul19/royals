@@ -6,6 +6,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import PageLoader from '@/components/layout/PageLoader';
 import FloatingActionStack from '@/components/layout/FloatingActionStack';
+import { ThemeProvider, THEME_SCRIPT } from '@/contexts/ThemeContext';
 import siteConfig from '@/data/site.json';
 
 // ── Fonts ────────────────────────────────────────────────────────────────────
@@ -58,7 +59,17 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${cormorant.variable} ${inter.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        {/*
+          Flash-prevention script — runs SYNCHRONOUSLY before React hydrates.
+          Reads localStorage and sets data-theme attribute immediately so the
+          correct theme palette is applied before any paint. Eliminates FOUT
+          (Flash of Unstyled Theme) when user has saved a light-theme preference.
+        */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+      </head>
       <body
         className="flex min-h-full flex-col"
         style={{
@@ -67,22 +78,24 @@ export default function RootLayout({
           fontFamily: 'var(--font-inter, ui-sans-serif, system-ui, sans-serif)',
         }}
       >
-        {/* Page loader — first session only (see PageLoader.tsx for trigger logic) */}
-        <PageLoader />
+        <ThemeProvider>
+          {/* Page loader — first session only (see PageLoader.tsx for trigger logic) */}
+          <PageLoader />
 
-        {/* Fixed header */}
-        <Header />
+          {/* Fixed header — contains theme toggle */}
+          <Header />
 
-        {/* Main content — all route pages render here */}
-        <main className="flex-1 pt-16" id="main-content">
-          {children}
-        </main>
+          {/* Main content — all route pages render here */}
+          <main className="flex-1 pt-16" id="main-content">
+            {children}
+          </main>
 
-        {/* Floating action stack — review + chat widget (present on every page) */}
-        <FloatingActionStack />
+          {/* Floating action stack — review + chat widget (present on every page) */}
+          <FloatingActionStack />
 
-        {/* Footer */}
-        <Footer />
+          {/* Footer */}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

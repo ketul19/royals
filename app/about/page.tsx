@@ -1,14 +1,15 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MessageCircle, Heart, Star, Sparkles, Shield } from 'lucide-react';
 import { buildWhatsAppLink } from '@/lib/buildWhatsAppLink';
 import siteConfig from '@/data/site.json';
+import NearbyLocations from '@/components/shared/NearbyLocations';
 
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    "Learn about Royal's Inn Hotel & Hostel in Navsari, Gujarat — our story, our values, and why travellers from across India choose us for a warm, authentic hospitality experience.",
+    "Learn about Royal's Inn Hotel & Hostel in Navsari, Gujarat â€” our story, our values, and why travellers from across India choose us for a warm, authentic hospitality experience.",
   openGraph: {
     title: "About Royal's Inn | Hotel & Hostel in Navsari",
     description:
@@ -27,13 +28,13 @@ const VALUES = [
     icon: Star,
     title: 'Consistent Quality',
     description:
-      "Clean rooms, hot water, fast Wi-Fi, and attentive service — every time, for every guest, regardless of room type or budget.",
+      "Clean rooms, hot water, fast Wi-Fi, and attentive service â€” every time, for every guest, regardless of room type or budget.",
   },
   {
     icon: Sparkles,
     title: 'Great Value',
     description:
-      "Whether you book a premium AC suite or an affordable hostel bed, you get honest value for money — no hidden charges, no unpleasant surprises.",
+      "Whether you book a premium AC suite or an affordable hostel bed, you get honest value for money â€” no hidden charges, no unpleasant surprises.",
   },
   {
     icon: Shield,
@@ -65,7 +66,7 @@ export default function AboutPage() {
         </h1>
       </div>
 
-      {/* ── Story Section ─── */}
+      {/* â”€â”€ Story Section â”€â”€â”€ */}
       <section className="py-20 lg:py-28" style={{ backgroundColor: 'var(--color-bg-primary)' }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -87,7 +88,7 @@ export default function AboutPage() {
               <div className="flex flex-col gap-4 text-sm leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
                 <p>
                   Royal&apos;s Inn was founded with a simple but powerful belief: every traveller deserves
-                  a comfortable, clean, and welcoming place to rest — regardless of their budget. Located
+                  a comfortable, clean, and welcoming place to rest â€” regardless of their budget. Located
                   in Navsari, Gujarat, we set out to create an establishment that combines the warmth of
                   Indian hospitality with modern comforts.
                 </p>
@@ -95,12 +96,12 @@ export default function AboutPage() {
                   What started as a modest hotel has grown into a combined hotel and hostel, serving
                   families, business professionals, solo backpackers, and pilgrims with equal care and
                   attention. Our on-site restaurant, The Table, brings together authentic Gujarati, Punjabi,
-                  South Indian, and Chinese cuisines — all freshly prepared each day.
+                  South Indian, and Chinese cuisines â€” all freshly prepared each day.
                 </p>
                 <p>
                   Over the years, we have hosted thousands of guests, earned a{' '}
                   <span style={{ color: 'var(--color-accent)' }}>
-                    {siteConfig.googleRating}★ Google rating
+                    {siteConfig.googleRating}â˜… Google rating
                   </span>{' '}
                   from our community, and built a reputation for genuine care in a city known for its
                   warmth and rich cultural heritage. We are proud to be Navsari&apos;s go-to destination for
@@ -126,7 +127,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Values ─── */}
+      {/* â”€â”€ Values â”€â”€â”€ */}
       <section
         className="py-20 lg:py-28"
         style={{ backgroundColor: 'var(--color-bg-elevated)' }}
@@ -184,7 +185,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Hotel + Hostel concept ─── */}
+      {/* â”€â”€ Hotel + Hostel concept â”€â”€â”€ */}
       <section className="py-20 lg:py-28" style={{ backgroundColor: 'var(--color-bg-primary)' }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -220,7 +221,7 @@ export default function AboutPage() {
               <div className="flex flex-col gap-4 text-sm leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
                 <p>
                   Royal&apos;s Inn is unique in Navsari for offering both hotel-grade rooms and budget
-                  hostel accommodation in the same property — sharing the same kitchen, the same
+                  hostel accommodation in the same property â€” sharing the same kitchen, the same
                   service standards, and the same genuine hospitality.
                 </p>
                 <p>
@@ -229,7 +230,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Our hostel wing offers clean dormitory beds with personal lockers, a social common
-                  area, and access to The Table restaurant — making it the ideal base for solo
+                  area, and access to The Table restaurant â€” making it the ideal base for solo
                   backpackers, students, and budget-conscious explorers.
                 </p>
               </div>
@@ -238,7 +239,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Team placeholder ─── */}
+      {/* â”€â”€ Team placeholder â”€â”€â”€ */}
       <section
         className="py-20 lg:py-24"
         style={{ backgroundColor: 'var(--color-bg-elevated)' }}
@@ -262,9 +263,9 @@ export default function AboutPage() {
               </h2>
               <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
                 Behind every comfortable stay is a team of dedicated individuals who take pride in
-                their work. Our staff — from front desk and housekeeping to kitchen and maintenance —
+                their work. Our staff â€” from front desk and housekeeping to kitchen and maintenance â€”
                 are trained to anticipate needs, resolve issues quickly, and always greet guests with
-                a smile. At Royal&apos;s Inn, the team isn&apos;t just employees — they&apos;re the heart
+                a smile. At Royal&apos;s Inn, the team isn&apos;t just employees â€” they&apos;re the heart
                 of the experience.
               </p>
             </div>
@@ -280,7 +281,7 @@ export default function AboutPage() {
                   className="mb-2 text-5xl font-bold"
                   style={{ fontFamily: 'var(--font-display)', color: 'var(--color-accent)' }}
                 >
-                  {siteConfig.googleRating}★
+                  {siteConfig.googleRating}â˜…
                 </p>
                 <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>
                   Average Google Rating
@@ -294,7 +295,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── CTA ─── */}
+      {/* â”€â”€ CTA â”€â”€â”€ */}
       <section
         className="py-20"
         style={{ backgroundColor: 'var(--color-bg-primary)' }}
@@ -309,8 +310,8 @@ export default function AboutPage() {
             Come Experience It Yourself
           </h2>
           <p className="mb-8 text-sm leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
-            Words can only say so much. The real Royal&apos;s Inn experience — the smiles, the food, the
-            comfort — is waiting for you in Navsari.
+            Words can only say so much. The real Royal&apos;s Inn experience â€” the smiles, the food, the
+            comfort â€” is waiting for you in Navsari.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
@@ -334,7 +335,7 @@ export default function AboutPage() {
               className="text-sm font-semibold transition-all duration-[var(--duration-base)] hover:underline"
               style={{ color: 'var(--color-text-muted)' }}
             >
-              Browse Rooms →
+              Browse Rooms â†’
             </Link>
           </div>
         </div>

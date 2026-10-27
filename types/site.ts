@@ -1,3 +1,17 @@
+export interface NearbyLocation {
+  /** Icon key — maps to a lucide-react icon in NearbyLocations component */
+  icon: 'train' | 'graduationCap' | 'wheat' | 'umbrella' | 'plane' | 'bus' | 'building';
+  /** Highlighted distance or time value, e.g. "10 Min" or "2 Km" */
+  value: string;
+  /** Descriptor label shown below the value */
+  label: string;
+  /**
+   * When true: value rendered extra-large in display font with accent colour +
+   * a distinct highlighted card style. When false: normal card style.
+   */
+  highlight: boolean;
+}
+
 export interface SiteConfig {
   name: string;
   tagline: string;
@@ -17,6 +31,8 @@ export interface SiteConfig {
   googleReviewUrl: string | null;
   /** Link to the Google Business Profile listing (for the rating badge) */
   googleProfileUrl: string | null;
+  /** Short Google Maps URL for the property — used in "View Map" buttons */
+  googleMapsUrl: string;
   socials: {
     platform: 'instagram' | 'facebook' | 'twitter' | 'youtube';
     url: string;
@@ -24,6 +40,13 @@ export interface SiteConfig {
   mapCoordinates: {
     lat: number;
     lng: number;
+  };
+  /** Nearby landmarks section — shared between Home and About pages */
+  nearbyLocations: {
+    sectionLabel: { index: string; label: string };
+    heading: string;
+    description: string;
+    locations: NearbyLocation[];
   };
   homePage: {
     hero: {

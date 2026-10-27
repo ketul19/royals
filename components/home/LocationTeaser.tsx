@@ -123,7 +123,7 @@ export default function LocationTeaser() {
             viewport={{ once: true, margin: '-80px' }}
           >
             <a
-              href={`https://www.google.com/maps/dir/?api=1&destination=${siteConfig.mapCoordinates.lat},${siteConfig.mapCoordinates.lng}`}
+              href={siteConfig.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-full flex-col items-center justify-center gap-4 transition-all duration-[var(--duration-base)]"
@@ -153,3 +153,4 @@ export default function LocationTeaser() {
     </section>
   );
 }
+

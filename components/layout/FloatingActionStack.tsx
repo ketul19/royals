@@ -7,6 +7,16 @@
  *  1. Chat launcher → opens ChatPanel
  *  2. Leave a Review → opens popover linking to Google Reviews
  *
+ * Bug #5 fix: raised from z-40 to z-[60] to appear above Leaflet map
+ * (which uses internal z-indexes 200–700 but is now isolated via
+ * CSS isolation: isolate on MapEmbed's wrapper — belt + suspenders).
+ *
+ * Chatbot navigation (Task 3):
+ *  - After any user message, a "Main Menu" pill appears above the input bar.
+ *  - Clicking "Main Menu" resets the chat to show quick-reply chips again.
+ *  - "Main Menu" button disappears when quick replies are visible.
+ *  - Styled distinctly from quick-reply chips (muted border, not accent).
+ *
  * Accessibility:
  *  - aria-label on all icon buttons
  *  - min 44×44px touch targets
@@ -118,7 +128,17 @@ function ChatPanel({ onClose }: { onClose: () => void }) {
   ]);
   const [input, setInput] = useState('');
   const [showQuickReplies, setShowQuickReplies] = useState(true);
+  /**
+   * showMainMenu: true after any user interaction (quick reply or typed message).
+   * Hidden when quick replies are visible (no need for Main Menu then).
+   * Clicking Main Menu → resets to quick replies state + disappears.
+   */
+  const [showMainMenu, setShowMainMenu] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    setTimeout(() => messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
+  };
 
   const sendMessage = (text: string) => {
     if (!text.trim()) return;
@@ -132,8 +152,28 @@ function ChatPanel({ onClose }: { onClose: () => void }) {
 
     setMessages((prev) => [...prev, userMsg, botMsg]);
     setInput('');
+    // Hide quick replies after first interaction; show Main Menu button
     setShowQuickReplies(false);
-    setTimeout(() => messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
+    setShowMainMenu(true);
+    scrollToBottom();
+  };
+
+  /**
+   * handleMainMenu — resets the chat to the main menu state.
+   * Adds a bot prompt message, re-shows quick reply chips,
+   * and hides the Main Menu button (no longer needed while chips are visible).
+   */
+  const handleMainMenu = () => {
+    const promptMsg: Message = {
+      id: Date.now(),
+      role: 'bot',
+      text: 'Here are some topics I can help you with:',
+      time: getTime(),
+    };
+    setMessages((prev) => [...prev, promptMsg]);
+    setShowQuickReplies(true);
+    setShowMainMenu(false);
+    scrollToBottom();
   };
 
   return (
@@ -219,7 +259,7 @@ function ChatPanel({ onClose }: { onClose: () => void }) {
           </div>
         ))}
 
-        {/* Quick replies */}
+        {/* Quick replies — shown initially and after Main Menu reset */}
         {showQuickReplies && (
           <div className="flex flex-wrap gap-2 pt-1">
             {chatbot.quickReplies.map((qr) => (
@@ -248,6 +288,40 @@ function ChatPanel({ onClose }: { onClose: () => void }) {
         )}
         <div ref={messagesEndRef} />
       </div>
+
+      {/* Main Menu button — appears after any interaction, hidden when quick replies visible */}
+      <AnimatePresence>
+        {showMainMenu && !showQuickReplies && (
+          <motion.div
+            className="shrink-0 px-4 pb-2 pt-1"
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 6 }}
+            transition={{ duration: 0.18 }}
+          >
+            <button
+              onClick={handleMainMenu}
+              className="rounded-full px-4 py-1.5 text-xs font-medium transition-all duration-[var(--duration-fast)]"
+              style={{
+                border: '1px solid var(--color-border-accent)',
+                color: 'var(--color-text-muted)',
+                backgroundColor: 'transparent',
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--color-accent)';
+                (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-accent)';
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--color-border-accent)';
+                (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-text-muted)';
+              }}
+              aria-label="Return to main menu topics"
+            >
+              Main Menu
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Input */}
       <div
@@ -302,7 +376,12 @@ export default function FloatingActionStack() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
+    /*
+     * Bug #5 fix: raised from z-40 to z-[60].
+     * z-50 is used by Header; z-[60] gives safe headroom above it and well
+     * above Leaflet's isolated internal z-indexes.
+     */
+    <div className="fixed bottom-6 right-6 z-[60] flex flex-col items-end gap-3">
       {/* Chat panel */}
       <AnimatePresence>
         {chatOpen && <ChatPanel onClose={() => setChatOpen(false)} />}

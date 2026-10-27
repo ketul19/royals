@@ -4,21 +4,28 @@
  * Header — Fixed two-tier navbar for Royal's Inn.
  *
  * Desktop layout:
- *   - Logo (left) → Nav links (center) → WhatsApp CTA (right)
+ *   - Logo (left) → Nav links (center) → Theme toggle → WhatsApp CTA (right)
  *
  * Mobile layout:
  *   - Logo (left) → Hamburger toggle (right)
- *   - Animated right-side drawer with stacked nav + WhatsApp CTA
+ *   - Animated right-side drawer with stacked nav + theme toggle + WhatsApp CTA
  *
  * Scroll behaviour:
  *   - At top of hero: transparent bg, no blur
- *   - On scroll (>50px): dark bg + backdrop-blur-md transition
+ *   - On scroll (>50px): themed bg + backdrop-blur-md transition
+ *
+ * Theme toggle:
+ *   - Elegant pill-shaped sliding switch (no icon — luxury brand aesthetic)
+ *   - Reads/writes via ThemeContext (localStorage-persisted)
+ *   - Uses two-pass mount check to guarantee zero React SSR hydration errors
+ *   - Zero component re-renders on toggle — pure CSS cascade
  *
  * Accessibility:
  *   - role="navigation" + aria-label on both desktop and mobile navs
  *   - aria-expanded / aria-controls on hamburger
  *   - aria-hidden on mobile drawer when closed (prevents tab-focus bleed)
  *   - Full keyboard-trap inside open drawer via tabIndex management
+ *   - aria-checked + aria-label on theme toggle switch
  */
 
 import { useState, useEffect, useCallback } from 'react';
@@ -31,6 +38,7 @@ import { Menu, X, MessageCircle } from 'lucide-react';
 import navItems from '@/data/navigation.json';
 import siteConfig from '@/data/site.json';
 import { buildWhatsAppLink } from '@/lib/buildWhatsAppLink';
+import { useTheme } from '@/contexts/ThemeContext';
 import {
   drawerVariants,
   overlayVariants,
@@ -40,6 +48,45 @@ import {
 import type { NavItem } from '@/types';
 
 const WHATSAPP_URL = buildWhatsAppLink("Hi! I'd like to know more about your rooms and availability.");
+
+// ─── Theme Toggle Pill ────────────────────────────────────────────────────────
+
+/**
+ * Elegant pill-shaped sliding toggle switch.
+ * No icons — minimal luxury aesthetic fitting a premium hotel brand.
+ * The sliding dot moves left (dark) / right (light) on toggle.
+ * Uses `mounted` state so server-rendered markup and client hydration match 100%.
+ */
+function ThemeToggle({ className = '' }: { className?: string }) {
+  const { theme, toggleTheme, mounted } = useTheme();
+  // Before client mounting, render dark (matches SSR HTML). After mounting, sync with theme.
+  const isLight = mounted && theme === 'light';
+
+  return (
+    <button
+      type="button"
+      role="switch"
+      aria-checked={isLight}
+      aria-label={isLight ? 'Switch to dark theme' : 'Switch to light theme'}
+      onClick={toggleTheme}
+      className={`theme-toggle-pill relative flex h-6 w-11 shrink-0 items-center rounded-full border focus-visible:outline-offset-4 ${className}`}
+      style={{
+        backgroundColor: isLight ? 'var(--color-accent)' : 'transparent',
+        borderColor: 'var(--color-accent)',
+      }}
+    >
+      {/* Sliding dot */}
+      <span
+        className="theme-toggle-dot absolute h-4 w-4 rounded-full"
+        style={{
+          backgroundColor: isLight ? 'var(--color-bg-primary)' : 'var(--color-accent)',
+          transform: isLight ? 'translateX(24px)' : 'translateX(4px)',
+        }}
+        aria-hidden="true"
+      />
+    </button>
+  );
+}
 
 // ─── Sub-components ──────────────────────────────────────────────────────────
 
@@ -102,6 +149,7 @@ function WhatsAppButton({ className = '' }: { className?: string }) {
 export default function Header() {
   const pathname = usePathname();
   const shouldReduceMotion = useReducedMotion();
+  const { theme, mounted } = useTheme();
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -145,6 +193,17 @@ export default function Header() {
   const toggleDrawer = useCallback(() => setDrawerOpen((prev) => !prev), []);
 
   /**
+   * Scrolled header bg — adapts to current theme once mounted.
+   * Dark: near-opaque dark background.
+   * Light: near-opaque warm ivory background.
+   */
+  const scrolledBg = isScrolled
+    ? mounted && theme === 'light'
+      ? 'rgba(250,248,244,0.94)'
+      : 'rgba(13,13,13,0.92)'
+    : 'transparent';
+
+  /**
    * Reduced-motion: skip x-translate animation, just fade.
    * Framer Motion's useReducedMotion() hook reads the OS preference;
    * we pass simplified variants when it returns true.
@@ -170,7 +229,7 @@ export default function Header() {
       <header
         className="fixed inset-x-0 top-0 z-50 transition-all duration-[var(--duration-slow)]"
         style={{
-          backgroundColor: isScrolled ? 'rgba(13,13,13,0.92)' : 'transparent',
+          backgroundColor: scrolledBg,
           backdropFilter: isScrolled ? 'blur(12px)' : 'none',
           WebkitBackdropFilter: isScrolled ? 'blur(12px)' : 'none',
           borderBottom: isScrolled ? '1px solid var(--color-border)' : '1px solid transparent',
@@ -218,29 +277,33 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* ── Desktop CTA ── */}
-          <div className="hidden lg:block">
+          {/* ── Desktop right controls: Theme toggle + WhatsApp CTA ── */}
+          <div className="hidden items-center gap-4 lg:flex">
+            <ThemeToggle />
             <WhatsAppButton />
           </div>
 
-          {/* ── Mobile: Hamburger ── */}
-          <button
-            type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-md transition-colors duration-[var(--duration-fast)] lg:hidden"
-            style={{ color: 'var(--color-text-primary)' }}
-            onClick={toggleDrawer}
-            aria-label={drawerOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            aria-expanded={drawerOpen}
-            aria-controls="mobile-nav-drawer"
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-accent)';
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-text-primary)';
-            }}
-          >
-            {drawerOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
-          </button>
+          {/* ── Mobile: Theme toggle + Hamburger ── */}
+          <div className="flex items-center gap-3 lg:hidden">
+            <ThemeToggle />
+            <button
+              type="button"
+              className="flex h-10 w-10 items-center justify-center rounded-md transition-colors duration-[var(--duration-fast)]"
+              style={{ color: 'var(--color-text-primary)' }}
+              onClick={toggleDrawer}
+              aria-label={drawerOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={drawerOpen}
+              aria-controls="mobile-nav-drawer"
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-accent)';
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-text-primary)';
+              }}
+            >
+              {drawerOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
+            </button>
+          </div>
         </div>
       </header>
 

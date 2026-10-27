@@ -6,6 +6,7 @@ import DiningTeaser from '@/components/home/DiningTeaser';
 import GalleryTeaser from '@/components/home/GalleryTeaser';
 import TestimonialsTeaser from '@/components/home/TestimonialsTeaser';
 import LocationTeaser from '@/components/home/LocationTeaser';
+import NearbyLocations from '@/components/shared/NearbyLocations';
 
 export const metadata: Metadata = {
   title: "Royal's Inn Hotel & Hostel | Navsari, Gujarat",
@@ -26,6 +27,7 @@ export default function HomePage() {
       <DiningTeaser />
       <GalleryTeaser />
       <TestimonialsTeaser />
+      <NearbyLocations />
       <LocationTeaser />
     </>
   );

@@ -8,11 +8,25 @@
   "googleRating": 4.5,
   "googleReviewUrl": null,
   "googleProfileUrl": null,
+  "googleMapsUrl": "https://maps.app.goo.gl/dus9bbjLGMbi62cXA",
   "socials": [
     { "platform": "instagram", "url": "https://www.instagram.com/" },
     { "platform": "facebook", "url": "https://www.facebook.com/" }
   ],
-  "mapCoordinates": { "lat": 20.9494, "lng": 72.9320 },
+  "mapCoordinates": { "lat": 20.9203606, "lng": 72.9086637 },
+  "nearbyLocations": {
+    "sectionLabel": { "index": "08", "label": "Around Us" },
+    "heading": "Conveniently Located",
+    "description": "Everything that matters is minutes from your door — railway stations, universities, colleges, beaches, and landmarks all within easy reach from Royal's Inn.",
+    "locations": [
+      { "icon": "train",         "value": "10 Min", "label": "Railway Station",       "highlight": false },
+      { "icon": "graduationCap", "value": "5 Min",  "label": "Naranlala College",      "highlight": false },
+      { "icon": "wheat",         "value": "2 Min",  "label": "Agriculture University", "highlight": true  },
+      { "icon": "graduationCap", "value": "5 Min",  "label": "Gandhi College",         "highlight": false },
+      { "icon": "graduationCap", "value": "5 Min",  "label": "Veterinary College",     "highlight": false },
+      { "icon": "umbrella",      "value": "20 Min", "label": "Dandi Museum & Beach",   "highlight": true  }
+    ]
+  },
   "homePage": {
     "hero": {
       "sectionLabel": { "index": "01", "label": "Welcome to Royal's Inn" },

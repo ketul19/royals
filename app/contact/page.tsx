@@ -241,7 +241,7 @@ export default function ContactPage() {
             </h2>
             <MapEmbed />
             <a
-              href={`https://www.google.com/maps/dir/?api=1&destination=${siteConfig.mapCoordinates.lat},${siteConfig.mapCoordinates.lng}`}
+              href={siteConfig.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-semibold transition-all duration-[var(--duration-base)] hover:gap-3"
@@ -255,3 +255,4 @@ export default function ContactPage() {
     </>
   );
 }
+

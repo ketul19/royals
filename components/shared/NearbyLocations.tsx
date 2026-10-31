@@ -134,7 +134,7 @@ function NearbyCard({ location }: { location: NearbyLocation }) {
 
 // ── Section Component ─────────────────────────────────────────────────────────
 
-export default function NearbyLocations() {
+export default function NearbyLocations({ isAbout }: { isAbout: boolean }) {
   const shouldReduce = useReducedMotion();
   const { nearbyLocations } = siteConfig;
 
@@ -154,11 +154,13 @@ export default function NearbyLocations() {
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
         >
-          <SectionLabel
-            index={nearbyLocations.sectionLabel.index}
-            label={nearbyLocations.sectionLabel.label}
-            className="mb-4 justify-center"
-          />
+          {!isAbout && 
+            <SectionLabel
+              index={nearbyLocations.sectionLabel.index}
+              label={nearbyLocations.sectionLabel.label}
+              className="mb-4 justify-center"
+            />
+          }
           <h2
             id="nearby-locations-heading"
             className="mb-4 text-3xl font-semibold lg:text-4xl"

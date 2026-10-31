@@ -53,10 +53,11 @@ export function RoomCard({ room, onViewDetails }: RoomCardProps) {
           className="object-cover transition-transform duration-[var(--duration-slow)] group-hover:scale-[1.04]"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
+        {/* Category badge — theme-aware background */}
         <span
           className="absolute right-3 top-3 rounded-full px-2.5 py-1 text-xs font-semibold"
           style={{
-            backgroundColor: 'rgba(13,13,13,0.85)',
+            backgroundColor: 'var(--color-bg-overlay)',
             color: CATEGORY_COLORS[room.category] ?? 'var(--color-accent)',
             border: `1px solid ${CATEGORY_COLORS[room.category] ?? 'var(--color-accent)'}`,
           }}
@@ -170,25 +171,40 @@ export function RoomDetailModal({ room, isOpen, onClose }: RoomDetailModalProps)
 
         {images.length > 1 && (
           <>
+            {/* Prev arrow — theme-aware using CSS tokens */}
             <button
               onClick={prev}
-              className="absolute left-3 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full"
-              style={{ backgroundColor: 'rgba(13,13,13,0.7)', color: 'var(--color-text-primary)' }}
+              className="absolute left-3 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full transition-all duration-[var(--duration-fast)]"
+              style={{
+                backgroundColor: 'var(--color-bg-overlay)',
+                color: 'var(--color-text-primary)',
+                border: '1px solid var(--color-border)',
+              }}
               aria-label="Previous image"
             >
               <ChevronLeft size={18} />
             </button>
+            {/* Next arrow — theme-aware using CSS tokens */}
             <button
               onClick={next}
-              className="absolute right-3 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full"
-              style={{ backgroundColor: 'rgba(13,13,13,0.7)', color: 'var(--color-text-primary)' }}
+              className="absolute right-3 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full transition-all duration-[var(--duration-fast)]"
+              style={{
+                backgroundColor: 'var(--color-bg-overlay)',
+                color: 'var(--color-text-primary)',
+                border: '1px solid var(--color-border)',
+              }}
               aria-label="Next image"
             >
               <ChevronRight size={18} />
             </button>
+            {/* Image counter badge — theme-aware using CSS tokens */}
             <span
-              className="absolute bottom-3 right-3 rounded-full px-2 py-0.5 text-xs"
-              style={{ backgroundColor: 'rgba(13,13,13,0.7)', color: 'var(--color-text-primary)' }}
+              className="absolute bottom-3 right-3 rounded-full px-2 py-0.5 text-xs font-medium"
+              style={{
+                backgroundColor: 'var(--color-bg-overlay)',
+                color: 'var(--color-text-primary)',
+                border: '1px solid var(--color-border)',
+              }}
             >
               {imgIndex + 1} / {images.length}
             </span>

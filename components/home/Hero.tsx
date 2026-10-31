@@ -7,9 +7,13 @@ import { buildWhatsAppLink } from '@/lib/buildWhatsAppLink';
 import { heroTextContainerVariants, heroTextLetterVariants, fadeUpVariants } from '@/lib/animationVariants';
 import SectionLabel from '@/components/shared/SectionLabel';
 import siteConfig from '@/data/site.json';
+import { useTheme } from '@/contexts/ThemeContext';
 
 export default function Hero() {
   const shouldReduce = useReducedMotion();
+  const { theme, mounted } = useTheme();
+  // Default dark before client mounts (SSR safety)
+  const isDark = !mounted || theme === 'dark';
 
   return (
     <section
@@ -27,11 +31,15 @@ export default function Hero() {
           sizes="100vw"
           id="hero-background-image"
         />
-        {/* Dark gradient overlays */}
+        {/* Theme-aware gradient overlay:
+            Dark theme — deep dark overlay (unchanged from original)
+            Light theme — warm ivory/sepia tint overlay for legible text on ivory theme */}
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to bottom, rgba(13,13,13,0.55) 0%, rgba(13,13,13,0.3) 40%, rgba(13,13,13,0.8) 100%)',
+            background: isDark
+              ? 'linear-gradient(to bottom, rgba(13,13,13,0.55) 0%, rgba(13,13,13,0.3) 40%, rgba(13,13,13,0.8) 100%)'
+              : 'linear-gradient(to bottom, rgba(250,248,244,0.45) 0%, rgba(250,248,244,0.20) 40%, rgba(250,248,244,0.72) 100%)',
           }}
           aria-hidden="true"
         />
@@ -40,7 +48,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
-          {/* Section label */}
+          {/* Section label — pill badge above hero title */}
           <SectionLabel 
             index={siteConfig.homePage.hero.sectionLabel.index} 
             label={siteConfig.homePage.hero.sectionLabel.label} 
@@ -64,7 +72,9 @@ export default function Hero() {
                     fontSize: 'clamp(4rem, 12vw, 10rem)',
                     color: 'var(--color-text-primary)',
                     letterSpacing: '0.08em',
-                    textShadow: '0 4px 32px rgba(0,0,0,0.5)',
+                    textShadow: isDark
+                      ? '0 4px 32px rgba(0,0,0,0.5)'
+                      : '0 4px 32px rgba(250,248,244,0.6)',
                   }}
                   variants={shouldReduce ? undefined : heroTextLetterVariants}
                   custom={wi}

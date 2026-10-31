@@ -296,6 +296,9 @@ export default function AboutPage() {
       </section>
 
       {/* â”€â”€ CTA â”€â”€â”€ */}
+            {/* Conveniently Located - shared section */}
+      <NearbyLocations isAbout={true}/>
+
       <section
         className="py-20"
         style={{ backgroundColor: 'var(--color-bg-primary)' }}

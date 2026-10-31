@@ -37,6 +37,7 @@
   --color-border:        #2a2520;   /* Subtle dividers and borders */
   --color-border-accent: #3d3020;   /* Slightly more visible border */
   --color-overlay:       rgba(0, 0, 0, 0.75);  /* Modal/lightbox overlay */
+  --color-bg-overlay:    rgba(13, 13, 13, 0.78); /* Semi-transparent dark bg — swiper arrows, badges */
 
   /* ── Radius Tokens ──────────────────────────────────────── */
   --radius-sm:   0.375rem;  /* 6px  — tags, badges */
@@ -77,6 +78,7 @@
   --color-border:        #d5ccc0;              /* Light warm dividers */
   --color-border-accent: #c9bfb0;              /* Slightly more visible warm border */
   --color-overlay:       rgba(0, 0, 0, 0.60);  /* Slightly lighter overlay */
+  --color-bg-overlay:    rgba(255, 252, 248, 0.88); /* Semi-transparent light bg — swiper arrows, badges */
   --shadow-card:         0 2px 16px 0 rgba(100, 80, 50, 0.10);
   --shadow-modal:        0 8px 64px 0 rgba(100, 80, 50, 0.20);
   --shadow-accent:       0 4px 24px 0 rgba(184, 137, 42, 0.20);

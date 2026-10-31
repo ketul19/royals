@@ -1,12 +1,33 @@
 'use client';
 
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { motion, useReducedMotion } from 'framer-motion';
 import { MapPin, Phone, MessageCircle, ArrowRight } from 'lucide-react';
 import { fadeUpVariants } from '@/lib/animationVariants';
 import SectionLabel from '@/components/shared/SectionLabel';
 import { buildWhatsAppLink } from '@/lib/buildWhatsAppLink';
 import siteConfig from '@/data/site.json';
+
+// Load Leaflet map client-side only (requires DOM)
+const MapEmbed = dynamic(() => import('@/components/contact/MapEmbed'), {
+  ssr: false,
+  loading: () => (
+    <div
+      className="flex items-center justify-center overflow-hidden rounded-lg"
+      style={{
+        height: '400px',
+        backgroundColor: 'var(--color-bg-elevated)',
+        border: '1px solid var(--color-border)',
+        borderRadius: 'var(--radius-md)',
+      }}
+    >
+      <span className="text-sm" style={{ color: 'var(--color-text-muted)' }}>
+        Loading map…
+      </span>
+    </div>
+  ),
+});
 
 export default function LocationTeaser() {
   const shouldReduce = useReducedMotion();
@@ -108,49 +129,17 @@ export default function LocationTeaser() {
             </div>
           </motion.div>
 
-          {/* Map placeholder card */}
+          {/* Real Leaflet map — same component as Contact page */}
           <motion.div
-            className="overflow-hidden rounded-lg"
-            style={{
-              backgroundColor: 'var(--color-bg-card)',
-              border: '1px solid var(--color-border)',
-              boxShadow: 'var(--shadow-card)',
-              height: '320px',
-            }}
             variants={shouldReduce ? undefined : fadeUpVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-80px' }}
           >
-            <a
-              href={siteConfig.googleMapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-full flex-col items-center justify-center gap-4 transition-all duration-[var(--duration-base)]"
-              aria-label="Open Google Maps directions to Royal's Inn"
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--color-border)';
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'transparent';
-              }}
-            >
-              <MapPin
-                size={48}
-                style={{ color: 'var(--color-accent)', opacity: 0.7 }}
-                aria-hidden="true"
-              />
-              <p className="text-sm font-medium" style={{ color: 'var(--color-text-muted)' }}>
-                {siteConfig.homePage.location.mapPlaceholderPrimary}
-              </p>
-              <p className="text-xs" style={{ color: 'var(--color-text-muted)', opacity: 0.6 }}>
-                {siteConfig.homePage.location.mapPlaceholderSecondary}
-              </p>
-            </a>
+            <MapEmbed />
           </motion.div>
         </div>
       </div>
     </section>
   );
 }
-

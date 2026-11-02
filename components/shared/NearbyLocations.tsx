@@ -134,7 +134,7 @@ function NearbyCard({ location }: { location: NearbyLocation }) {
 
 // ── Section Component ─────────────────────────────────────────────────────────
 
-export default function NearbyLocations({ isAbout }: { isAbout: boolean }) {
+export default function NearbyLocations({ isAbout = false }: { isAbout?: boolean }) {
   const shouldReduce = useReducedMotion();
   const { nearbyLocations } = siteConfig;
 

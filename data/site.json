@@ -19,11 +19,11 @@
     "heading": "Conveniently Located",
     "description": "Everything that matters is minutes from your door — railway stations, universities, colleges, beaches, and landmarks all within easy reach from Royal's Inn.",
     "locations": [
-      { "icon": "train",         "value": "10 Min", "label": "Railway Station",       "highlight": false },
-      { "icon": "graduationCap", "value": "5 Min",  "label": "Naranlala College",      "highlight": false },
+      { "icon": "train",         "value": "10 Min", "label": "Railway Station",       "highlight": true },
+      { "icon": "graduationCap", "value": "5 Min",  "label": "Naranlala College",      "highlight": true },
       { "icon": "wheat",         "value": "2 Min",  "label": "Agriculture University", "highlight": true  },
-      { "icon": "graduationCap", "value": "5 Min",  "label": "Gandhi College",         "highlight": false },
-      { "icon": "graduationCap", "value": "5 Min",  "label": "Veterinary College",     "highlight": false },
+      { "icon": "graduationCap", "value": "5 Min",  "label": "Gandhi College",         "highlight": true },
+      { "icon": "graduationCap", "value": "5 Min",  "label": "Veterinary College",     "highlight": true },
       { "icon": "umbrella",      "value": "20 Min", "label": "Dandi Museum & Beach",   "highlight": true  }
     ]
   },

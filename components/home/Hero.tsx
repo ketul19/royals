@@ -31,18 +31,15 @@ export default function Hero() {
           sizes="100vw"
           id="hero-background-image"
         />
-        {/* Theme-aware gradient overlay:
-            Dark theme — deep dark overlay (unchanged from original)
-            Light theme — warm ivory/sepia tint overlay for legible text on ivory theme */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: isDark
-              ? 'linear-gradient(to bottom, rgba(13,13,13,0.55) 0%, rgba(13,13,13,0.3) 40%, rgba(13,13,13,0.8) 100%)'
-              : 'linear-gradient(to bottom, rgba(250,248,244,0.45) 0%, rgba(250,248,244,0.20) 40%, rgba(250,248,244,0.72) 100%)',
-          }}
-          aria-hidden="true"
-        />
+        {isDark && (
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(13,13,13,0.55) 0%, rgba(13,13,13,0.3) 40%, rgba(13,13,13,0.8) 100%)',
+            }}
+            aria-hidden="true"
+          />
+        )}
       </div>
 
       {/* Content */}
@@ -72,9 +69,9 @@ export default function Hero() {
                     fontSize: 'clamp(4rem, 12vw, 10rem)',
                     color: 'var(--color-text-primary)',
                     letterSpacing: '0.08em',
-                    textShadow: isDark
-                      ? '0 4px 32px rgba(0,0,0,0.5)'
-                      : '0 4px 32px rgba(250,248,244,0.6)',
+                    // Dark theme: subtle shadow to lift text off photo overlay
+                    // Light theme: no shadow needed — dark text reads directly on bright photo
+                    textShadow: isDark ? '0 4px 32px rgba(0,0,0,0.5)' : 'none',
                   }}
                   variants={shouldReduce ? undefined : heroTextLetterVariants}
                   custom={wi}
@@ -92,7 +89,11 @@ export default function Hero() {
           {/* Tagline */}
           <motion.p
             className="mt-6 max-w-md text-lg leading-relaxed"
-            style={{ color: 'var(--color-text-muted)' }}
+            style={{
+              color: 'var(--color-text-muted)',
+              // Light theme: slight text shadow to separate from bright photo
+              textShadow: isDark ? 'none' : '0 1px 8px rgba(255,255,255,0.8)',
+            }}
             variants={shouldReduce ? undefined : fadeUpVariants}
             initial="hidden"
             animate="visible"

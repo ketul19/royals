@@ -1,0 +1,7 @@
+**now don't delete anything from this implementation plan just update it because i have worked with you and you do delete something from this and you forget to do that okay so Don't Delete Anything Just Strike through The Text What Is Need to Update and add the Updated Text Beside it okay what is Necessary and give me again the this review with updated content make sur eyou don't delete the Necessary things okay just update With Strike Through this now analyze it again**
+**Analyze and Think And Do Like Senior Software Developer**
+
+ **I want Production Leval Analysis and The Solution Okay You Must Think Like Senior Software Developer and the Best Production Leval Analyst okay I want Bestest Solution My Code could Get Okay So analze Production Leval And Solution Must Be Production Leval**
+
+
+Now Explain me Everytrhing IN Deatil What You understood if you have solution tell me before coding then i wil tell you to implement it later by Questions answer okay Tell me What You Understand Perfectly in detail and If You DOnt Undertand Ask Me Questions as many Questionsas you wnat okay And Whan Analysis If You Need to open any files any code file open it dont ask me but you need some features specific code then tell me  I wil Provide It To You Understad So Tell Me What YOu Understood How You Are Gonna do it before COding. Explain me in detail and ask me as many questions as you want but dont make mistake okay

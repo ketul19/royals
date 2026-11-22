@@ -6,7 +6,8 @@
       {
         "id": "wedding",
         "name": "Wedding",
-        "images": [
+        "images": 
+        [
           { "src": "/images/gallery/events/W1.jpg", "alt": "Beautifully decorated wedding hall at Royal's Inn", "caption": "Grand Wedding Hall" },
           { "src": "/images/gallery/events/W1.jpg", "alt": "Wedding reception setup with floral decorations", "caption": "Reception Decor" },
           { "src": "/images/gallery/events/W4.jpg", "alt": "Wedding ceremony mandap setup", "caption": "Mandap Ceremony" },
@@ -42,21 +43,22 @@
         "id": "rooms-gallery",
         "name": "Rooms",
         "images": [
-          { "src": "/images/gallery/spaces/Royal_G1.jpg", "alt": "Comfortable AC deluxe room interior at Royal's Inn", "caption": "AC Deluxe Room" },
-          { "src": "/images/gallery/spaces/Royal_G2.jpg", "alt": "Non-AC standard room with clean furnishings", "caption": "Standard Room" },
-          { "src": "/images/gallery/spaces/Royal_G4.jpg", "alt": "Bright and airy hotel room with natural light", "caption": "Bright Suite" },
-          { "src": "/images/gallery/spaces/Royal_S1.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
-          { "src": "/images/gallery/spaces/Royal_S2.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
-          { "src": "/images/gallery/spaces/Royal_S1.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
-          { "src": "/images/gallery/spaces/Royal_S2.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
-          { "src": "/images/gallery/spaces/Royal_S1.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
-          { "src": "/images/gallery/spaces/Royal_S2.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
-          { "src": "/images/gallery/spaces/Royal_S3.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
-          { "src": "/images/gallery/spaces/Royal_S4.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
+         
+          { "src": "/images/rooms/Royal_B2.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
+          { "src": "/images/rooms/Royal_B3.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
+          { "src": "/images/rooms/Royal_B4.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
+          { "src": "/images/rooms/Royal_B5.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
+          { "src": "/images/rooms/Royal_B7.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
+          { "src": "/images/rooms/Royal_B9.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
+          { "src": "/images/rooms/Royal_B12.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
+          { "src": "/images/rooms/Royal_B10.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
+          { "src": "/images/rooms/Royal_B25.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
+          
           { "src": "/images/gallery/spaces/Royal_SE1.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
-          { "src": "/images/gallery/spaces/Royal_SE2.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
           { "src": "/images/gallery/spaces/Royal_SE3.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
-          { "src": "/images/gallery/spaces/Royal_SE4.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" }
+          { "src": "/images/gallery/spaces/Royal_SE4.jpg", "alt": "Well-appointed twin room at Royal's Inn", "caption": "Twin Room" },
+           { "src": "/images/gallery/spaces/Royal_G2.jpg", "alt": "Non-AC standard room with clean furnishings", "caption": "Standard Room" },
+          { "src": "/images/gallery/spaces/Royal_G4.jpg", "alt": "Bright and airy hotel room with natural light", "caption": "Bright Suite" }
         ]
       },
       {
@@ -81,9 +83,11 @@
         "id": "hostel-gallery",
         "name": "Hostel",
         "images": [
-          { "src": "/images/gallery/spaces/G1.jpg", "alt": "Clean hostel dormitory with bunk beds at Royal's Inn", "caption": "Hostel Dorm" },
-          { "src": "/images/gallery/spaces/G2.jpg", "alt": "Hostel common area and social space", "caption": "Common Area" },
-          { "src": "/images/gallery/spaces/G5.jpg", "alt": "Hostel private room interior", "caption": "Private Room" }
+          { "src": "/images/rooms/Royal_H5.jpeg", "alt": "Clean hostel dormitory with bunk beds at Royal's Inn", "caption": "Hostel Dorm" },
+          { "src": "/images/rooms/Royal_H2.jpeg", "alt": "Hostel common area and social space", "caption": "Cleaner Rooms" },
+          { "src": "/images/rooms/Royal_H3.jpeg", "alt": "Hostel private room interior", "caption": "Private Sheets And Pillows" },
+          { "src": "/images/rooms/Royal_H4.jpeg", "alt": "Hostel private room interior", "caption": "Private Bed" },
+          { "src": "/images/rooms/Royal_H1.jpeg", "alt": "Hostel private room interior", "caption": "Toilet" }
         ]
       }
     ]

@@ -3,12 +3,12 @@
     "id": "ac-deluxe",
     "category": "AC",
     "name": "AC Deluxe Room",
-    "pricePerNight": 1800,
+    "pricePerNight": 1200,
     "priceUnit": "per room",
     "maxGuests": 2,
     "beds": 1,
     "description": "A spacious air-conditioned deluxe room with modern furnishings, ideal for couples and solo travellers seeking a comfortable retreat after exploring Navsari.",
-    "amenities": ["Air Conditioning", "Private Bathroom", "Free Wi-Fi", "LED TV", "Hot Water", "Room Service", "Wardrobe", "Study Desk"],
+    "amenities": ["Air Conditioning", "Private Bathroom", "Free Wi-Fi", "Room Service"],
     "images": [
       "/images/rooms/Royal_B23.jpg",
       "/images/rooms/Royal_B1.jpg"
@@ -19,12 +19,12 @@
     "id": "ac-twin",
     "category": "AC",
     "name": "AC Twin Room",
-    "pricePerNight": 2200,
+    "pricePerNight": 1200,
     "priceUnit": "per room",
     "maxGuests": 2,
     "beds": 2,
-    "description": "Two single beds in a fully air-conditioned room — perfect for colleagues or friends travelling together. Enjoy modern amenities in a clean, well-lit space.",
-    "amenities": ["Air Conditioning", "Two Single Beds", "Free Wi-Fi", "LED TV", "Hot Water", "Private Bathroom", "Room Service"],
+    "description": "Double beds in a fully air-conditioned room — perfect for colleagues or friends travelling together. Enjoy modern amenities in a clean, well-lit space.",
+    "amenities": ["Air Conditioning", "Double Beds", "Free Wi-Fi", "Private Bathroom", "Room Service"],
     "images": [
       "/images/rooms/Royal_B22.jpg",
       "/images/rooms/Royal_B3.jpg"
@@ -35,12 +35,12 @@
     "id": "ac-suite",
     "category": "AC",
     "name": "AC Suite",
-    "pricePerNight": 3200,
+    "pricePerNight": 1200,
     "priceUnit": "per room",
     "maxGuests": 3,
     "beds": 1,
     "description": "Our premium AC suite offers a king-size bed, an exclusive sitting area, and premium furnishings. Ideal for families and business travellers who expect the best.",
-    "amenities": ["Air Conditioning", "King Bed", "Sitting Area", "Free Wi-Fi", "Smart TV", "Mini Fridge", "Hot Water", "Premium Toiletries", "Room Service", "Wardrobe"],
+    "amenities": ["Air Conditioning", "King Bed", "Sitting Area", "Free Wi-Fi",  "Premium Toiletries", "Room Service"],
     "images": [
      "/images/rooms/Royal_B21.jpg",
       "/images/rooms/Royal_B4.jpg"
@@ -51,12 +51,12 @@
     "id": "nonac-standard",
     "category": "Non-AC",
     "name": "Non-AC Standard Room",
-    "pricePerNight": 900,
+    "pricePerNight": 999,
     "priceUnit": "per room",
     "maxGuests": 2,
     "beds": 1,
     "description": "A clean, comfortable standard room with ceiling fan — an excellent budget choice for travellers who want value without compromise on cleanliness and service.",
-    "amenities": ["Ceiling Fan", "Private Bathroom", "Free Wi-Fi", "LED TV", "Hot Water", "Wardrobe"],
+    "amenities": ["Ceiling Fan", "Private Bathroom", "Free Wi-Fi", "LED TV"],
     "images": [
      "/images/rooms/Royal_B18.jpg",
       "/images/rooms/Royal_B6jpg"
@@ -67,12 +67,12 @@
     "id": "nonac-twin",
     "category": "Non-AC",
     "name": "Non-AC Twin Room",
-    "pricePerNight": 1200,
+    "pricePerNight": 999,
     "priceUnit": "per room",
     "maxGuests": 2,
     "beds": 2,
-    "description": "Two single beds in a non-AC room with ceiling fan — a budget-friendly option for friends or colleagues. Clean linen, shared Wi-Fi, and a private bathroom.",
-    "amenities": ["Ceiling Fan", "Two Single Beds", "Private Bathroom", "Free Wi-Fi", "LED TV", "Hot Water"],
+    "description": "Double beds in a non-AC room with ceiling fan — a budget-friendly option for friends or colleagues. Clean linen, shared Wi-Fi, and a private bathroom.",
+    "amenities": ["Ceiling Fan", "Double Beds", "Private Bathroom", "Free Wi-Fi"],
     "images": [
       "/images/rooms/Royal_B17.jpg",
       "/images/rooms/Royal_B8.jpg"
@@ -83,15 +83,17 @@
     "id": "hostel-bed",
     "category": "Hostel",
     "name": "Hostel Dormitory Bed",
-    "pricePerNight": 350,
-    "priceUnit": "per bed",
+    "pricePerNight": 2999,
+    "priceUnit": "per month",
     "maxGuests": 1,
     "beds": 1,
     "description": "Affordable dormitory-style accommodation in our hostel wing. Bunk beds in a shared room with secure lockers — perfect for solo backpackers and budget travellers.",
     "amenities": ["Bunk Bed", "Personal Locker", "Shared Bathroom", "Free Wi-Fi", "Ceiling Fan", "Common Area Access"],
     "images": [
-      "/images/rooms/Royal_B15.jpg",
-      "/images/rooms/Royal_B9.jpg"
+      "/images/rooms/Royal_H5.jpeg",
+      "/images/rooms/Royal_H3.jpeg",
+      "/images/rooms/Royal_H4.jpeg",
+      "/images/rooms/Royal_H2.jpeg"
     ],
     "ctaMessage": "Hi! I'd like to book a hostel bed at Royal's Inn. Please share availability and dorm details."
   },
@@ -99,15 +101,15 @@
     "id": "hostel-private",
     "category": "Hostel",
     "name": "Hostel Private Room",
-    "pricePerNight": 650,
-    "priceUnit": "per room",
+    "pricePerNight": 2999,
+    "priceUnit": "per month",
     "maxGuests": 2,
     "beds": 1,
     "description": "A private room in our hostel wing — the best of both worlds. All the social atmosphere of the hostel with the privacy of your own room and lock.",
     "amenities": ["Private Room", "Ceiling Fan", "Shared Bathroom", "Free Wi-Fi", "Personal Locker", "Common Area Access"],
     "images": [
-     "/images/rooms/Royal_B13.jpg",
-      "/images/rooms/Royal_B11.jpg"
+     "/images/rooms/Royal_H5.jpeg",
+      "/images/rooms/Royal_H3.jpeg"
     ],
     "ctaMessage": "Hi! I'd like to enquire about the Hostel Private Room at Royal's Inn. Please share availability."
   }
